@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #007cc2;
+  --secondary: #e0e0e0;
+  --third: #1699c7;
+  --fourth: #252525;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.burger-label {
+  display: flex;
+  flex-direction: column;
+  width: 70px;
+  cursor: pointer;
+}
+
+.burger-label span {
+  background: #007cc2;
+  border-radius: 10px;
+  height: 7px;
+  margin: 7px 0;
+  transition: 0.3s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+
+.burger-label span:nth-of-type(1) {
+  width: 50%;
+}
+
+.burger-label span:nth-of-type(2) {
+  width: 100%;
+}
+
+.burger-label span:nth-of-type(3) {
+  width: 75%;
+}
+
+.burger-input {
+  display: none;
+}
+
+.burger-input:checked ~ span:nth-of-type(1) {
+  transform-origin: bottom;
+  transform: rotatez(45deg) translate(8px, 0px);
+}
+
+.burger-input:checked ~ span:nth-of-type(2) {
+  transform-origin: top;
+  transform: rotatez(-45deg);
+}
+
+.burger-input:checked ~ span:nth-of-type(3) {
+  transform-origin: bottom;
+  width: 50%;
+  transform: translate(30px, -11px) rotatez(45deg);
+}
+
+.theme-switch-checkbox {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+}
+
+.theme-switch-label {
+  background-color: #111;
+  width: 50px;
+  height: 26px;
+  border-radius: 50px;
+  position: relative;
+  padding: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all .15s ease-in-out;
+}
+.theme-switch-label:hover {
+  background-color: var(--third);
+
+}
+
+.theme-switch-label .ball {
+  background-color: #fff;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  border-radius: 50%;
+  transition: transform .15s linear;
+}
+
+.theme-switch-checkbox:checked + .theme-switch-label .ball {
+  transform: translateX(24px);
+}
