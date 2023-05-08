@@ -16,7 +16,7 @@ let slides = [
 
 const Carousel = () => {
   return (
-    <img src={carousel1} alt="carousel1" className='rounded-lg w-full h-[32rem] object-cover' />
+    <img src={carousel1} alt="carousel1" className='rounded-lg w-full h-56 lg:h-[32rem] object-cover' />
     // <div id='carousel'>
     //     <div id="indicators-carousel" className="relative w-full" data-carousel="slide">
     //         <div className="relative h-56 overflow-hidden rounded-lg carousel-inner">
