@@ -22,7 +22,19 @@ const Carousel = () => {
                 <div className="hidden duration-700 ease-in-out" data-carousel-item="active">
                     <img src={carousel1} className="absolute object-cover block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="alt1"/>
                 </div>
-                {
+                <div className="hidden duration-700 ease-in-out" data-carousel-item>
+                    <img src={carousel2} className="absolute object-cover block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="alt2"/>
+                </div>
+                <div className="hidden duration-700 ease-in-out" data-carousel-item>
+                    <img src={carousel3} className="absolute object-cover block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="alt3"/>
+                </div>
+                <div className="hidden duration-700 ease-in-out" data-carousel-item>
+                    <img src={carousel4} className="absolute object-cover block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="alt4"/>
+                </div>
+                <div className="hidden duration-700 ease-in-out" data-carousel-item>
+                    <img src={carousel5} className="absolute object-cover block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="alt5"/>
+                </div>
+                {/* {
                     slides.slice(1).map((slide, i) => {
                         return (
                             <div className="hidden duration-700 ease-in-out" data-carousel-item key={slide.id}>
@@ -30,17 +42,21 @@ const Carousel = () => {
                             </div>
                         )
                     })
-                }
+                } */}
             </div>
             <div className="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2">
                 <button type="button" className="w-3 h-3 rounded-full carousel-pagination" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
-                {
+                <button type="button" className="w-3 h-3 rounded-full carousel-pagination" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+                <button type="button" className="w-3 h-3 rounded-full carousel-pagination" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+                <button type="button" className="w-3 h-3 rounded-full carousel-pagination" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
+                <button type="button" className="w-3 h-3 rounded-full carousel-pagination" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
+                {/* {
                     slides.slice(1).map((slide, i) => {
                         return (
                             <button key={slide.id} type="button" className="w-3 h-3 rounded-full carousel-pagination" aria-current="false" aria-label={`Slide ${slide.id}`} data-carousel-slide-to={i-1}></button>
                         )
                     })
-                }
+                } */}
             </div>
             <button type="button" className="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
                 <span className="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-third dark:group-focus:ring-gray-800/70 group-focus:outline-none">
