@@ -1,21 +1,31 @@
 import { useState, useEffect } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import { Sidebar } from './components/components'
+import { Loader, Home, SharedLayout } from './components/components';
+
+// import Aos from "aos";
+// import "aos/dist/aos.css";
 
 function App() {
+  const [loader, setLoader] = useState(true);
 
+  useEffect(() => {
+    setTimeout(() => {
+      setLoader(false);
+    }, 2000);
+  }, []);
 
   return (
     <>
+      {loader && <Loader />}
       <Router>
         <Routes>
-          
+          <Route path="/" element={<SharedLayout />}>
+            <Route index element={<Home />} />
+
+          </Route>
         </Routes>
       </Router>
-      <Sidebar />
     </>
   );
 }
