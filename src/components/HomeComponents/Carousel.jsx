@@ -1,8 +1,5 @@
 import React from 'react';
-import { carousel1, carousel2, carousel3, carousel4, carousel5, carousel6, carousel7, carousel8, carousel9, carousel10, carousel11, carousel12, carousel13, carousel14, carousel15,  } from '../../assets/assets'
-
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
+import { carousel1, carousel2, carousel3, carousel4, carousel5, carousel6, carousel7, carousel8, carousel9, carousel10 } from '../../assets/assets'
 
 let slides = [
     {id: 1, path: carousel1, alt: 'alt1'},
@@ -15,11 +12,6 @@ let slides = [
     {id: 8, path: carousel8, alt: 'alt8'},
     {id: 9, path: carousel9, alt: 'alt9'},
     {id: 10, path: carousel10, alt: 'alt10'},
-    // {id: 11, path: carousel11, alt: 'alt11'},
-    // {id: 12, path: carousel12, alt: 'alt12'},
-    // {id: 13, path: carousel13, alt: 'alt13'},
-    // {id: 14, path: carousel14, alt: 'alt14'},
-    // {id: 15, path: carousel15, alt: 'alt15'},
 ]
 
 const Carousel = () => {
@@ -39,18 +31,6 @@ const Carousel = () => {
                         )
                     })
                 }
-                {/* <div className="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src={carousel2} className="absolute object-cover block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." />
-                </div>
-                <div className="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src={carousel3} className="absolute object-cover block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." />
-                </div>
-                <div className="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src={carousel4} className="absolute object-cover block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." />
-                </div>
-                <div className="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src={carousel5} className="absolute object-cover block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." />
-                </div> */}
             </div>
             <div className="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2">
                 <button type="button" className="w-3 h-3 rounded-full carousel-pagination" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
@@ -61,10 +41,6 @@ const Carousel = () => {
                         )
                     })
                 }
-                {/* <button type="button" className="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
-                <button type="button" className="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
-                <button type="button" className="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
-                <button type="button" className="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button> */}
             </div>
             <button type="button" className="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
                 <span className="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-third dark:group-focus:ring-gray-800/70 group-focus:outline-none">
