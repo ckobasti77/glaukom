@@ -20,19 +20,19 @@ const Carousel = () => {
     <div id='carousel'>
         <div id="indicators-carousel" className="relative w-full" data-carousel="slide">
             <div className="relative h-56 overflow-hidden rounded-lg carousel-inner">
-                <div className="hidden duration-700 ease-in-out" data-carousel-item="active">
+                <div className="duration-700 ease-in-out" data-carousel-item="active">
                     <img src={carousel1} className="absolute object-cover block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="alt1"/>
                 </div>
-                <div className="hidden duration-700 ease-in-out" data-carousel-item>
+                <div className="duration-700 ease-in-out" data-carousel-item>
                     <img src={carousel2} className="absolute object-cover block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="alt2"/>
                 </div>
-                <div className="hidden duration-700 ease-in-out" data-carousel-item>
+                <div className="duration-700 ease-in-out" data-carousel-item>
                     <img src={carousel3} className="absolute object-cover block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="alt3"/>
                 </div>
-                <div className="hidden duration-700 ease-in-out" data-carousel-item>
+                <div className="duration-700 ease-in-out" data-carousel-item>
                     <img src={carousel4} className="absolute object-cover block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="alt4"/>
                 </div>
-                <div className="hidden duration-700 ease-in-out" data-carousel-item>
+                <div className="duration-700 ease-in-out" data-carousel-item>
                     <img src={carousel5} className="absolute object-cover block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="alt5"/>
                 </div>
                 {/* {
