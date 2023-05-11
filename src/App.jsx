@@ -1,7 +1,18 @@
 import { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import { Loader, Home, SharedLayout } from './components/components';
+import {
+  Loader,
+  Home,
+  SharedLayout,
+  Contact,
+  OcnaPoliklinika,
+  Glaukom,
+  LaserVaskularniCentar,
+  OpstaHirurgija,
+  Kardiologija,
+  Dijagnostika,
+} from "./components/components";
 
 // import Aos from "aos";
 // import "aos/dist/aos.css";
@@ -22,7 +33,13 @@ function App() {
         <Routes>
           <Route path="/" element={<SharedLayout />}>
             <Route index element={<Home />} />
-
+            <Route path="/ocna-poliklinika" element={<OcnaPoliklinika />} />
+            <Route path="/glaukom" element={<Glaukom />} />
+            <Route path="/laser-vaskularni-centar" element={<LaserVaskularniCentar />} />
+            <Route path="/opsta-hirurgija" element={<OpstaHirurgija />} />
+            <Route path="/kardiologija" element={<Kardiologija />} />
+            <Route path="/dijagnostika" element={<Dijagnostika />} />
+            <Route path="/kontakt" element={<Contact />} />
           </Route>
         </Routes>
       </Router>

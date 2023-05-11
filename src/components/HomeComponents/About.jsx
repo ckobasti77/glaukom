@@ -1,19 +1,29 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 import { logo } from "../../assets/assets";
 
 const About = () => {
   return (
     <div>
-      <div className="">
+      <motion.div
+        initial={{ opacity: 0, scale: 0, y: "-50px" }}
+        animate={{ opacity: 1, scale: 0.75, y: 0 }}
+        transition={{ duration: 0.5, delay: 3 }}
+      >
         <img src={logo} alt="logo" className="transform scale-75 mx-auto" />
         <p className="text-xl text-fourth text-center">
-          Poliklinika <span className="text-primary">JATROS</span> je osnovana 1999. godine kao ordinacija, ali se
-          vremenom razvila u polikliniku.
+          Poliklinika <span className="text-primary">JATROS</span> je osnovana
+          1999. godine kao ordinacija, ali se vremenom razvila u polikliniku.
         </p>
-      </div>
+      </motion.div>
       <div className="about flex flex-wrap justify-evenly my-12">
-        <div className="w-[80%] my-6 lg:w-[33%] p-12 flex flex-col justify-between">
+        <motion.div 
+          className="w-[80%] my-6 lg:w-[33%] p-12 flex flex-col justify-between"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: [null, 1.2, 1] }}
+          transition={{ duration: 0.3, delay: 2 }}
+        >
           <h2 className="text-center text-2xl text-primary mb-4">
             Zašto baš mi?
           </h2>
@@ -27,8 +37,13 @@ const About = () => {
           <p className="text-fourth text-justify">
             Mislimo da je preporuka najbolja reklama.
           </p>
-        </div>
-        <div className="w-[80%] my-6 lg:w-[33%] p-12 flex flex-col justify-between">
+        </motion.div>
+        <motion.div
+          className="w-[80%] my-6 lg:w-[33%] p-12 flex flex-col justify-between"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: [0.8, 1.2, 1] }}
+          transition={{ duration: 0.3, delay: 2.2 }}
+        >
           <h2 className="text-center text-2xl text-primary mb-4">
             Naše specijalnosti
           </h2>
@@ -42,7 +57,7 @@ const About = () => {
             za uspešno dijagnostikovanje i lečenje. Operaciona sala radi po
             principu dnevne bolnice.
           </p>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

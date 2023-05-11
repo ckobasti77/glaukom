@@ -1,18 +1,20 @@
 import React, { useRef, useState, useEffect } from "react";
 import { motion, usePresence, useAnimate } from "framer-motion";
 import { logo } from "../assets/assets";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 
 import { Link } from "react-router-dom";
 
 let tabs = [
-  { id: 1, label: "O nama" },
-  { id: 2, label: "Očna poliklinika" },
-  { id: 3, label: "Glaukom" },
-  { id: 4, label: "Laser vaskularni centar" },
-  { id: 5, label: "Opšta hirurgija" },
-  { id: 6, label: "Kardiologija" },
-  { id: 7, label: "Dijagnostika" },
-  { id: 8, label: "Kontakt" },
+  { id: 1, label: "O nama", path:'/' },
+  { id: 2, label: "Očna poliklinika", path:'/ocna-poliklinika' },
+  { id: 3, label: "Glaukom", path:'/glaukom' },
+  { id: 4, label: "Laser vaskularni centar", path:'/laser-vaskularni-centar' },
+  { id: 5, label: "Opšta hirurgija", path:'/opsta-hirurgija' },
+  { id: 6, label: "Kardiologija", path:'/kardiologija' },
+  { id: 7, label: "Dijagnostika", path:'/dijagnostika' },
+  { id: 8, label: "Kontakt", path:'/kontakt' },
 ];
 
 const Sidebar = () => {
@@ -23,6 +25,7 @@ const Sidebar = () => {
 
   const [theme, setTheme] = useState("light");
 
+  
   const toggleTheme = () => {
     if (theme === "light") {
       setTheme("dark");
@@ -54,13 +57,16 @@ const Sidebar = () => {
         navOpen
           ? "transform translate-x-0 nav"
           : "transform translate-x-[-100%]"
-      } text-fourth navigacija flex flex-col justify-between p-6 fixed h-screen w-screen md:w-[300px] rounded-none md:rounded-r-3xl bg-secondary left-0 top-0 z-[999]`}
+      } text-fourth navigacija flex flex-col justify-between p-6 fixed h-screen w-screen md:w-[300px] rounded-none md:rounded-tr-3xl bg-secondary left-0 top-0 z-[999]`}
     >
-      <label
+      <motion.label
+        initial={{ opacity: 0, scale: 0, y: "-50px" }}
+        animate={{ opacity: 1, scale: 0.75, y: 0 }}
+        transition={{ duration: 0.5, delay: 3 }}
         htmlFor="check"
         className={`${
-          !navOpen ? "xs:-right-[60px]" : "xs:-right-[10px]"
-        } burger-label absolute -top-[6px] -right-[60px] transform scale-50`}
+          !navOpen ? "xs:-right-[60px] bg-secondary scale-75 border-r-4 border-b-4 border-b-primary border-r-primary items-center -top-[9px]" : "xs:-right-[5px] -top-[4px] scale-50"
+        } burger-label absolute  rounded-br-2xl -right-[60px] transform `}
       >
         <input
           type="checkbox"
@@ -72,18 +78,19 @@ const Sidebar = () => {
         <span></span>
         <span></span>
         <span></span>
-      </label>
-      <Link tp="/" data-aos='fade-right'>
+      </motion.label>
+      <Link to="/" data-aos="fade-right" onClick={() => setActiveTab(1)}>
         <img src={logo} alt="logo" />
       </Link>
       <div className="flex flex-col gap-5">
         {tabs.map((tab) => (
-          <button
+          <Link
+            to={tab.path}
             key={tab.id}
             onClick={() => setActiveTab(tab.id)}
             className={`${
               activeTab === tab.id ? "text-secondary" : "hover:opacity-75"
-            } text-xl font-medium px-4 py-1.5 relative whitespace-nowrap`}
+            } text-xl text-center font-medium px-4 py-1.5 relative whitespace-nowrap`}
           >
             {activeTab === tab.id && (
               <motion.div
@@ -94,51 +101,48 @@ const Sidebar = () => {
             )}
 
             {tab.label}
-          </button>
+          </Link>
         ))}
       </div>
-      <div className="flex items-center">
-        <div className="w-3/6">
-          <input
-            type="checkbox"
-            name="theme-switch"
-            id="theme-switch"
-            className="theme-switch-checkbox"
-          />
-          <label htmlFor="theme-switch" className="theme-switch-label z-[5]">
-            <svg
-              className={`fill-secondary transform scale-[.6] z-[6]`}
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 512 512"
-            >
-              <path d="M375.7 19.7c-1.5-8-6.9-14.7-14.4-17.8s-16.1-2.2-22.8 2.4L256 61.1 173.5 4.2c-6.7-4.6-15.3-5.5-22.8-2.4s-12.9 9.8-14.4 17.8l-18.1 98.5L19.7 136.3c-8 1.5-14.7 6.9-17.8 14.4s-2.2 16.1 2.4 22.8L61.1 256 4.2 338.5c-4.6 6.7-5.5 15.3-2.4 22.8s9.8 13 17.8 14.4l98.5 18.1 18.1 98.5c1.5 8 6.9 14.7 14.4 17.8s16.1 2.2 22.8-2.4L256 450.9l82.5 56.9c6.7 4.6 15.3 5.5 22.8 2.4s12.9-9.8 14.4-17.8l18.1-98.5 98.5-18.1c8-1.5 14.7-6.9 17.8-14.4s2.2-16.1-2.4-22.8L450.9 256l56.9-82.5c4.6-6.7 5.5-15.3 2.4-22.8s-9.8-12.9-17.8-14.4l-98.5-18.1L375.7 19.7zM269.6 110l65.6-45.2 14.4 78.3c1.8 9.8 9.5 17.5 19.3 19.3l78.3 14.4L402 242.4c-5.7 8.2-5.7 19 0 27.2l45.2 65.6-78.3 14.4c-9.8 1.8-17.5 9.5-19.3 19.3l-14.4 78.3L269.6 402c-8.2-5.7-19-5.7-27.2 0l-65.6 45.2-14.4-78.3c-1.8-9.8-9.5-17.5-19.3-19.3L64.8 335.2 110 269.6c5.7-8.2 5.7-19 0-27.2L64.8 176.8l78.3-14.4c9.8-1.8 17.5-9.5 19.3-19.3l14.4-78.3L242.4 110c8.2 5.7 19 5.7 27.2 0zM256 368a112 112 0 1 0 0-224 112 112 0 1 0 0 224zM192 256a64 64 0 1 1 128 0 64 64 0 1 1 -128 0z" />
-            </svg>
-            <svg
-              className={`fill-secondary transform scale-[.6] z-[6]`}
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 384 512"
-            >
-              <path d="M144.7 98.7c-21 34.1-33.1 74.3-33.1 117.3c0 98 62.8 181.4 150.4 211.7c-12.4 2.8-25.3 4.3-38.6 4.3C126.6 432 48 353.3 48 256c0-68.9 39.4-128.4 96.8-157.3zm62.1-66C91.1 41.2 0 137.9 0 256C0 379.7 100 480 223.5 480c47.8 0 92-15 128.4-40.6c1.9-1.3 3.7-2.7 5.5-4c4.8-3.6 9.4-7.4 13.9-11.4c2.7-2.4 5.3-4.8 7.9-7.3c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-3.7 .6-7.4 1.2-11.1 1.6c-5 .5-10.1 .9-15.3 1c-1.2 0-2.5 0-3.7 0c-.1 0-.2 0-.3 0c-96.8-.2-175.2-78.9-175.2-176c0-54.8 24.9-103.7 64.1-136c1-.9 2.1-1.7 3.2-2.6c4-3.2 8.2-6.2 12.5-9c3.1-2 6.3-4 9.6-5.8c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-3.6-.3-7.1-.5-10.7-.6c-2.7-.1-5.5-.1-8.2-.1c-3.3 0-6.5 .1-9.8 .2c-2.3 .1-4.6 .2-6.9 .4z" />
-            </svg>
-            <span className="ball"></span>
-          </label>
-        </div>
-        <div className="flex gap-2 w-3/6">
+      <div className="flex justify-center gap-2">
+        <a
+          href="https://www.facebook.com/jatrospoliklinika/"
+          target="_blank"
+          className="cursor-pointer"
+        >
+          <span className="sr-only">Instagram</span>
           <svg
-            className="transform scale-[.5] cursor-pointer fill-fourth hover:fill-primary"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 448 512"
+            className="h-10 w-10 mx-1 fill-fourth hover:fill-primary"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
           >
-            <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+            <path
+              fillRule="evenodd"
+              d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+              clipRule="evenodd"
+            />
           </svg>
+        </a>
+        <a
+          href="https://www.instagram.com/jatros.poliklinika/"
+          target="_blank"
+          className="cursor-pointer"
+        >
+          <span className="sr-only">Facebook</span>
           <svg
-            className="transform scale-[.5] cursor-pointer fill-fourth hover:fill-primary"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 448 512"
+            className="h-10 w-10 mx-1 fill-fourth hover:fill-primary"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
           >
-            <path d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z" />
+            <path
+              fillRule="evenodd"
+              d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+              clipRule="evenodd"
+            />
           </svg>
-        </div>
+        </a>
       </div>
     </nav>
   );
