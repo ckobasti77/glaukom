@@ -4,6 +4,7 @@ import Loader from "./Loader";
 import SharedLayout from "./SharedLayout";
 import Map from "./Map";
 import Novo from "./Novo";
+import ZakaziPregled from "./ZakaziPregled";
 import OcnaPoliklinika from "./OcnaPoliklinika/OcnaPoliklinika";
 import Glaukom from "./Glaukom/Glaukom";
 import LaserVaskularniCentar from "./LaserVaskularniCentar/LaserVaskularniCentar";
@@ -39,5 +40,7 @@ export {
     Footer,
     LaserskoLecenjeGlaukoma,
     FullContactInfo,
-    Novo
+    Novo,
+    ZakaziPregled,
+    
 }

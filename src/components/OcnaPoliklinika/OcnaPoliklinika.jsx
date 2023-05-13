@@ -27,29 +27,29 @@ let cards = [
 const OcnaPoliklinika = () => {
 const [activeImg, setActiveImg] = useState(null)
   return (
-    <section id="ocna-poliklinika" className="overflow-y-hidden w-sc">
+    <section id="ocna-poliklinika" className="overflow-y-hidden">
       <div className="sticky top-0 w-screen overflow-y-hidden z-[99] text-2xl md:text-3xl lg:text-4xl xl:text-5xl bg-gradient-to-br py-4 from-[#2641c2] to-[#01bffd] rounded-b-3xl text-secondary text-center" data-aos="fade-down" data-aos-delay="300">Očna poliklinika</div>
       <img src={ocna1} alt="ocna-poliklinika" className="mt-8 md:mt-16 w-screen md:w-5/6 lg:w-4/6  object-contain lg:object-cover mx-auto rounded-2xl ocna1" data-aos="zoom-in-down" data-aos-delay="600"/>
       <div className="w-full my-12 flex justify-center" data-aos="zoom-in-down" data-aos-delay="900">
         <Novo />
       </div>
-      <div className="flex flex-wrap gap-10 my-16 mx-6 h-auto overflow-y-hidden ">
+      <div className="flex flex-wrap gap-10 my-16 mx-6 h-auto">
         {
           cards.map(card => (
-            <div key={card.id} className="md-div border-2 border-primary mx-auto w-11/12 sm:w-[500px] my-4 flex flex-col justify-between gap-8" data-aos="zoom-in-down" data-aos-delay={100 * card.delay}>
-              <img src={card.img} onClick={() => setActiveImg(card.id)} alt="ocna-poliklinika" className="ocna2 hover:opacity-[.65card-headings ] transition-all duration-150 cursor-pointer rounded-[45px] m-5 object-cover h-[260px]"/>
+            <div key={card.id} className="md-div border-2 border-primary mx-auto w-11/12 sm:w-[500px] my-4 flex flex-col justify-between gap-8" data-aos="zoom-in" data-aos-delay={200 * card.delay}>
+              <img src={card.img} onClick={() => setActiveImg(card.id - 1)} alt="ocna-poliklinika" className="ocna2 hover:opacity-[.65] transition-all duration-150 cursor-zoom-in rounded-[45px] m-5 object-cover h-[260px]"/>
               <div className="p-10 flex flex-col gap-10 h-full">
-                <h3 className="card-headings text-xl bg-gradient-to-br from-[#2641c2] to-[#01bffd] rounded-xl text-secondary px-4 py-2"><BsFillEyeFill className="inline mr-2" data-aos="zoom-in-down" data-aos-delay={200 * card.delay}/>{card.text1}</h3>
-                <h3 className="card-headings text-xl bg-gradient-to-br from-[#2641c2] to-[#01bffd] rounded-xl text-secondary px-4 py-2"><BsFillEyeFill className="inline mr-2" data-aos="zoom-in-down" data-aos-delay={250 * card.delay}/>{card.text2}</h3>
-                {card.text3 && <h3 className="card-headings text-xl bg-gradient-to-br from-[#2641c2] to-[#01bffd] rounded-xl text-secondary px-4 py-2"><BsFillEyeFill className="inline mr-2" data-aos="zoom-in-down" data-aos-delay={300 * card.delay}/>{card.text3}</h3>}
+                <h3 className="card-headings text-xl bg-gradient-to-br from-[#2641c2] to-[#01bffd] rounded-xl text-secondary px-4 py-2"><BsFillEyeFill className="inline mr-2" data-aos="zoom-in" data-aos-delay={400 * card.delay}/>{card.text1}</h3>
+                <h3 className="card-headings text-xl bg-gradient-to-br from-[#2641c2] to-[#01bffd] rounded-xl text-secondary px-4 py-2"><BsFillEyeFill className="inline mr-2" data-aos="zoom-in" data-aos-delay={600 * card.delay}/>{card.text2}</h3>
+                {card.text3 && <h3 className="card-headings text-xl bg-gradient-to-br from-[#2641c2] to-[#01bffd] rounded-xl text-secondary px-4 py-2"><BsFillEyeFill className="inline mr-2" data-aos="zoom-in" data-aos-delay={800 * card.delay}/>{card.text3}</h3>}
               </div>
             </div>
           ))
         }
       </div>
-      {activeImg !== 0 && activeImg !== null && (
-        <div className="fixed top-0 left-0 w-screen h-screen flex justify-center items-center bg-secondary z-[99999999]">
-          <AiOutlineClose className="absolute top-4 right-4 cursor-pointer text-2xl fill-fourth hover:fill-fourth/75" onClick={() => setActiveImg(null)}/>
+      {activeImg !== null && (
+        <div className="fixed top-0 left-0 w-screen h-screen flex justify-center items-center bg-secondary z-[99999999] cursor-zoom-out" onClick={() => setActiveImg(null)}>
+          <AiOutlineClose className="absolute top-4 right-4 cursor-pointer text-2xl fill-fourth hover:fill-fourth/75"/>
           <img src={cards[activeImg].img} alt="ocna-poliklinika" className="h-5/6 object-contain"/>
         </div>
       )}

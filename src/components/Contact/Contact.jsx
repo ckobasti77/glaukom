@@ -18,6 +18,7 @@ const Contact = () => {
           data-aos="zoom-in"
           data-aos-delay="200"
         >
+          <span className="absolute -top-10 pozovite mx-auto rounded-t-xl bg-secondary py-4 px-8 text-xl">E-mail</span>
           <form action="" className="flex h-full flex-col justify-between">
             <div className="flex gap-4">
               <div
@@ -94,10 +95,11 @@ const Contact = () => {
           </form>
         </div>
         <div
-          className="w-5/6 md:w-2/6 flex flex-col items-center h-[500px] justify-between mx-auto my-12 md-div p-12"
+          className="w-5/6 md:w-2/6 relative flex flex-col items-center h-[500px] justify-between mx-auto my-12 md-div p-12"
           data-aos="zoom-in"
           data-aos-delay="200"
         >
+          <span className="absolute -top-10 pozovite mx-auto rounded-t-xl bg-secondary py-4 px-8 text-xl">Pozovite</span>
           <a
             href="tel:+381 11 344 76 77"
             className="dani text-lg px-4 py-2 rounded-full w-[220px] text-center flex gap-x-2 items-center justify-between hover:bg-gradient-to-br hover:from-[#2641c2] hover:to-[#01bffd] hover:text-secondary group"

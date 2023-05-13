@@ -19,7 +19,7 @@ const About = () => {
           data-aos="zoom-in"
           data-aos-delay="200"
         >
-          Poliklinika <span className="text-primary">JATROS</span> je osnovana
+          Poliklinika <span className="text-gradient">JATROS</span> je osnovana
           1999. godine kao ordinacija, ali se vremenom razvila u polikliniku.
         </p>
       </div>
@@ -29,15 +29,15 @@ const About = () => {
           data-aos="zoom-in"
           data-aos-delay="300"
         >
-          <h2 className="text-center text-primary mb-4">
+          <h2 className="text-center text-gradient mb-4">
             Zašto baš mi?
           </h2>
           <p className="text-fourth text-left spacing my-4">
-            <span className="text-primary">JATROS</span> je od početka bila
+            <span className="text-gradient">JATROS</span> je od početka bila
             porodična delatnost. Kako se širio spektar medicinskih usluga, tako
             su stručnost, odgovornost i posvećenost pacijentu bili prepoznati
             pre svega od porodica koje su sve više poklanjale poverenje
-            poliklinici <span className="text-primary">JATROS</span>.
+            poliklinici <span className="text-gradient">JATROS</span>.
           </p>
           <p className="text-fourth text-left spacing">
             Mislimo da je preporuka najbolja reklama.
@@ -48,11 +48,11 @@ const About = () => {
           data-aos="zoom-in"
           data-aos-delay="400"
         >
-          <h2 className="text-center text-primary mb-4">
+          <h2 className="text-center text-gradient mb-4">
             Naše specijalnosti
           </h2>
           <p className="text-fourth text-left spacing my-4">
-            Od 2015. godine <span className="text-primary">JATROS</span>{" "}
+            Od 2015. godine <span className="text-gradient">JATROS</span>{" "}
             poliklinika pruža usluge oftalmologije, hirurgije, vaskularne
             hirurgije i interne medicine (kardiologija). Opremljeni smo
             savremenin medicinskim aparatima i uređajima, međutim vreme koje smo

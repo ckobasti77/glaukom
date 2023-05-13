@@ -16,6 +16,14 @@ import ocna4 from "./ocna-poliklinika/ocna-poliklinika-4-min.jpg";
 import ocna5 from "./ocna-poliklinika/ocna-poliklinika-5-min.jpg";
 import ocna6 from "./ocna-poliklinika/ocna-poliklinika-6-min.jpg";
 import ocna7 from "./ocna-poliklinika/ocna-poliklinika-7-min.jpg";
+import glaukom1 from "./glaukom/glaukom-1-min.jpg";
+import glaukom2 from "./glaukom/glaukom-2-min.jpg";
+import glaukom3 from "./glaukom/glaukom-3-min.jpg";
+import glaukom4 from "./glaukom/glaukom-4-min.jpg";
+import lvc from "./laser-vaskularni-centar.jpg";
+import dijagnostika from "./dijagnostika.jpg";
+import opsta from "./opsta-hirurgija-min.jpg";
+import kardiologija from "./kardiologija-min.jpg";
 
 export {
   logo,
@@ -36,4 +44,13 @@ export {
   ocna5,
   ocna6,
   ocna7,
+  glaukom1,
+  glaukom2,
+  glaukom3,
+  glaukom4,
+  lvc,
+  dijagnostika,
+  opsta,
+  kardiologija,
+  
 };

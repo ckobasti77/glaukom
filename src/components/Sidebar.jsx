@@ -98,7 +98,10 @@ const Sidebar = () => {
           <Link
             to={tab.path}
             key={tab.id}
-            onClick={() => setActiveTab(tab.id)}
+            onClick={() => {
+              setActiveTab(tab.id)
+              setNavOpen(false);
+            }}
             className={`${
               activeTab === tab.id ? "text-secondary" : "hover:opacity-75"
             } text-xl text-center font-medium px-4 py-1.5 relative whitespace-nowrap sidebar-links rounded-full`}
