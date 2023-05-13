@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { kardiologija } from '../../assets/assets';
+import { ZakaziPregled } from '../components';
 
 const jedan = [
   { id: 1, text: "Pregled interniste kardiologa" },
@@ -12,7 +13,7 @@ const jedan = [
 
 const Kardiologija = () => {
   return (
-    <div>
+    <div className='flex flex-col'>
       <div className="text-5xl bg-gradient-to-br py-4 from-[#2641c2] to-[#01bffd] rounded-b-3xl text-secondary text-center">
         Kardiologija
       </div>
@@ -44,6 +45,7 @@ const Kardiologija = () => {
           ))}
         </div>
       </div>
+      <ZakaziPregled />
     </div>
   )
 }

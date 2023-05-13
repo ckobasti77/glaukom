@@ -1,6 +1,7 @@
 import React from "react";
 
 import { lvc } from "../../assets/assets";
+import { ZakaziPregled } from '../components';
 
 const jedan = [
   {id: 1, text: 'Laserski tretman vena (EVLA) u uslovima lokalne tumescentne anestezije'},
@@ -23,7 +24,7 @@ const dva = [
 
 const LaserVaskularniCentar = () => {
   return (
-    <div>
+    <div className="flex flex-col">
       <div className="text-5xl bg-gradient-to-br py-4 from-[#2641c2] to-[#01bffd] rounded-b-3xl text-secondary text-center">
         Laser vaskularni centar
       </div>
@@ -110,6 +111,7 @@ const LaserVaskularniCentar = () => {
           </p>
         </div>
       </div>
+      <ZakaziPregled />
     </div>
   );
 };

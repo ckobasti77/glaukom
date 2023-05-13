@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import { BsFillEyeFill } from "react-icons/bs";
 import { AiOutlineClose } from "react-icons/ai";
+import { ZakaziPregled } from '../components';
 
 import {
   ocna1,
@@ -27,7 +28,7 @@ let cards = [
 const OcnaPoliklinika = () => {
 const [activeImg, setActiveImg] = useState(null)
   return (
-    <section id="ocna-poliklinika" className="overflow-y-hidden">
+    <section id="ocna-poliklinika" className="overflow-y-hidden flex flex-col">
       <div className="sticky top-0 w-screen overflow-y-hidden z-[99] text-2xl md:text-3xl lg:text-4xl xl:text-5xl bg-gradient-to-br py-4 from-[#2641c2] to-[#01bffd] rounded-b-3xl text-secondary text-center" data-aos="fade-down" data-aos-delay="300">Očna poliklinika</div>
       <img src={ocna1} alt="ocna-poliklinika" className="mt-8 md:mt-16 w-screen md:w-5/6 lg:w-4/6  object-contain lg:object-cover mx-auto rounded-2xl ocna1" data-aos="zoom-in-down" data-aos-delay="600"/>
       <div className="w-full my-12 flex justify-center" data-aos="zoom-in-down" data-aos-delay="900">
@@ -53,6 +54,7 @@ const [activeImg, setActiveImg] = useState(null)
           <img src={cards[activeImg].img} alt="ocna-poliklinika" className="h-5/6 object-contain"/>
         </div>
       )}
+      <ZakaziPregled />
     </section>
   );
 };

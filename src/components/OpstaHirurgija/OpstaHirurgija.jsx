@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { opsta } from '../../assets/assets';
+import { ZakaziPregled } from '../components';
 
 const jedan = [
   { id: 1, text: "kidanje konaca" },
@@ -16,7 +17,7 @@ const jedan = [
 
 const OpstaHirurgija = () => {
   return (
-    <div>
+    <div className='flex flex-col'>
       <div className="text-5xl bg-gradient-to-br py-4 from-[#2641c2] to-[#01bffd] rounded-b-3xl text-secondary text-center">
         Opšta hirurgija
       </div>
@@ -48,6 +49,7 @@ const OpstaHirurgija = () => {
           ))}
         </div>
       </div>
+      <ZakaziPregled />
     </div>
   )
 }
