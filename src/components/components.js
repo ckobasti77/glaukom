@@ -1,18 +1,23 @@
 import Sidebar from "./Sidebar";
-import Home from "./Home";
+import Home from "./Home/Home";
 import Loader from "./Loader";
 import SharedLayout from "./SharedLayout";
 import Map from "./Map";
-import OcnaPoliklinika from "./OcnaPoliklinika";
-import Glaukom from "./Glaukom";
-import LaserVaskularniCentar from "./LaserVaskularniCentar";
-import OpstaHirurgija from "./OpstaHirurgija";
-import Kardiologija from "./Kardiologija";
-import Dijagnostika from "./Dijagnostika";
-import Contact from "./Contact";
-import Carousel from "./HomeComponents/Carousel";
-import About from "./HomeComponents/About";
-import WorkTime from "./HomeComponents/WorkTime";
+import Novo from "./Novo";
+import OcnaPoliklinika from "./OcnaPoliklinika/OcnaPoliklinika";
+import Glaukom from "./Glaukom/Glaukom";
+import LaserVaskularniCentar from "./LaserVaskularniCentar/LaserVaskularniCentar";
+import OpstaHirurgija from "./OpstaHirurgija/OpstaHirurgija";
+import Kardiologija from "./Kardiologija/Kardiologija";
+import Dijagnostika from "./Dijagnostika/Dijagnostika";
+import Contact from "./Contact/Contact";
+import FullContactInfo from "./Contact/FullContactInfo";
+import Footer from "./Footer";
+import LaserskoLecenjeGlaukoma from "./LaserskoLecenjeGlaukoma/LaserskoLecenjeGlaukoma";
+import Carousel from "./Home/Carousel";
+import About from "./Home/About";
+import WorkTime from "./Home/WorkTime";
+import WorktimeMap from "./Home/WorktimeMap";
 
 export {
     Sidebar,
@@ -23,6 +28,7 @@ export {
     About,
     Map,
     WorkTime,
+    WorktimeMap,
     OcnaPoliklinika,
     Glaukom,
     LaserVaskularniCentar,
@@ -30,5 +36,8 @@ export {
     Kardiologija,
     Dijagnostika,
     Contact,
-
+    Footer,
+    LaserskoLecenjeGlaukoma,
+    FullContactInfo,
+    Novo
 }

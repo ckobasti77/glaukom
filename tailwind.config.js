@@ -18,7 +18,8 @@ export default {
         'md': '768px',
         'lg': '1024px',
         'xl': '1200px',
-        '2xl': '1920px',
+        '2xl': '1500px',
+        '3xl': '1920px',
         // => @media (min-width: 640px) { ... }
   
         'laptop': '1024px',
@@ -29,5 +30,5 @@ export default {
       },
     },
   },
-  plugins: [require('flowbite/plugin')]
+  plugins: [require('flowbite/plugin'), require('tailwindcss-neumorphism')]
 }

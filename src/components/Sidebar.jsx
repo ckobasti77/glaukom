@@ -25,6 +25,17 @@ const Sidebar = () => {
 
   const [theme, setTheme] = useState("light");
 
+  useEffect(() => {
+    const ruta = window.location.href.split('/').pop();
+    const aktivnaRuta = tabs.findIndex(tab => tab.path === `/${ruta}`)
+    if (aktivnaRuta !== -1) {
+      setActiveTab(1)
+    } else {
+      setActiveTab(tabs[aktivnaRuta].id)
+    }
+  }, [])
+  
+
   
   const toggleTheme = () => {
     if (theme === "light") {
@@ -52,12 +63,12 @@ const Sidebar = () => {
 
   return (
     <nav
-      ref={sidebarRef}
       className={`${
         navOpen
           ? "transform translate-x-0 nav"
           : "transform translate-x-[-100%]"
-      } text-fourth navigacija flex flex-col justify-between p-6 fixed h-screen w-screen md:w-[300px] rounded-none md:rounded-tr-3xl bg-secondary left-0 top-0 z-[999]`}
+      } text-fourth navigacija flex flex-col justify-between pt-16 pb-6 px-6 fixed h-screen w-[300px] rounded-none rounded-tr-3xl bg-secondary left-0 top-0 z-[999]`}
+
     >
       <motion.label
         initial={{ opacity: 0, scale: 0, y: "-50px" }}
@@ -65,8 +76,8 @@ const Sidebar = () => {
         transition={{ duration: 0.5, delay: 3 }}
         htmlFor="check"
         className={`${
-          !navOpen ? "xs:-right-[60px] bg-secondary scale-75 border-r-4 border-b-4 border-b-primary border-r-primary items-center -top-[9px]" : "xs:-right-[5px] -top-[4px] scale-50"
-        } burger-label absolute  rounded-br-2xl -right-[60px] transform `}
+          !navOpen ? "xs:-right-[60px] bg-secondary transition-transform duration-300 transform scale-75 border-r-4 border-b-4 border-b-third border-r-third items-center -top-[9px] burger-label-aa" : "xs:-right-[2px] -top-[2px] overflow-hidden transform scale-0"
+        } burger-label absolute  rounded-br-2xl -right-[60px]`}
       >
         <input
           type="checkbox"
@@ -79,8 +90,8 @@ const Sidebar = () => {
         <span></span>
         <span></span>
       </motion.label>
-      <Link to="/" data-aos="fade-right" onClick={() => setActiveTab(1)}>
-        <img src={logo} alt="logo" />
+      <Link to="/" data-aos="fade-right" data-aos-delay="500" onClick={() => setActiveTab(1)}>
+        <img src={logo} alt="logo" className="transform xs:scale-[.8] "/>
       </Link>
       <div className="flex flex-col gap-5">
         {tabs.map((tab) => (
@@ -90,12 +101,12 @@ const Sidebar = () => {
             onClick={() => setActiveTab(tab.id)}
             className={`${
               activeTab === tab.id ? "text-secondary" : "hover:opacity-75"
-            } text-xl text-center font-medium px-4 py-1.5 relative whitespace-nowrap`}
+            } text-xl text-center font-medium px-4 py-1.5 relative whitespace-nowrap sidebar-links rounded-full`}
           >
             {activeTab === tab.id && (
               <motion.div
                 layoutId="button"
-                className="absolute inset-0 bg-gradient-to-br from-third to-primary rounded-full text-secondary -z-10"
+                className="absolute inset-0 bg-gradient-to-br from-primary to-third rounded-full text-secondary -z-10"
                 transition={{ type: "spring", duration: 0.3 }}
               ></motion.div>
             )}

@@ -6,7 +6,7 @@
 
 :root {
   --primary: #007cc2;
-  --secondary: #e0e0e0;
+  --secondary: #e6ecf6;
   --third: #1699c7;
   --fourth: #252525;
 }
@@ -52,16 +52,60 @@ body {
 .burger-label {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   width: 70px;
+  height: 70px;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+
+.burger-label-aa {
+  background: linear-gradient(145deg, #f6fdff, #cfd4dd);
+}
+.burger-label-aa:active {
+  background: linear-gradient(145deg, #cfd4dd, #f6fdff);
+}
+
+.gradient-hover {
+  background-image: linear-gradient(to right, #2641c2, #01bffd, #2641c2, #01bffd);
+  box-shadow: 4px 4px 8px #8a8e94, -4px -4px 8px #ffffff;
+  border: 2px solid var(--primary);
+  background-size: 300% 100%;
+  moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+#container{
+  width: 400px;
+  background: yellow;
+}
+#floated{
+  float: left;
+  width: 150px;
+  background: red;
+}
+
+.gradient-hover:hover {
+  background-position: 100% 100%;
+  moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+.gradient-hover:active {
+  background-position: 100% 100%;
+  moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 .burger-label span {
   background: #007cc2;
   border-radius: 10px;
   height: 7px;
-  margin: 7px 0;
+  margin: 5.5px 0;
   transition: all 0.3s cubic-bezier(0.68, -0.6, 0.32, 1.6);
 }
 
@@ -79,6 +123,10 @@ body {
 
 .burger-input {
   display: none;
+}
+
+.burger-input:checked ~ span {
+  margin: 7px 0;
 }
 
 .burger-input:checked ~ span:nth-of-type(1) {
@@ -208,46 +256,112 @@ body {
   background: var(--secondary);
 }
 
-.about div {
+.md-div {
   border-radius: 50px;
-  background: #e0e0e0;
-  box-shadow: inset 8px 8px 16px #bebebe, inset -8px -8px 16px #ffffff;
+  border: 3px solid var(--secondary);
+
+  background: var(--secondary);
+  box-shadow: inset 8px 8px 16px #8a8e94, inset -8px -8px 16px #ffffff,
+    8px 8px 16px #8a8e94, -8px -8px 16px #ffffff;
+  border: 2px solid var(--secondary);
+}
+
+.md-heading {
+  border-radius: 50px;
+  background: var(--secondary);
+  box-shadow: inset 6px 6px 12px #8a8e94, inset -6px -6px 12px #ffffff,
+    6px 6px 12px #8a8e94, -6px -6px 12px #ffffff;
+  border: 2px solid var(--secondary);
+}
+
+.worktime-heading-div,
+.dani,
+.inputs-outline {
+  background: var(--secondary);
+  box-shadow: 3px 3px 6px #8a8e94, -3px -3px 6px #ffffff;
+}
+
+.ocna1 {
+  border: 3px solid var(--secondary);
+  box-shadow: 8px 8px 16px #8a8e94, -8px -8px 16px #ffffff;
+}
+.ocna2 {
+  border: 2px solid var(--secondary);
+  box-shadow: 4px 4px 8px #8a8e94, -4px -4px 8px #ffffff;
+}
+
+
+.form-submit {
+  background: linear-gradient(145deg, #f6fdff, #cfd4dd);
+  box-shadow: 3px 3px 6px #8a8e94, -3px -3px 6px #ffffff;
+}
+
+.form-submit:active {
+  background: linear-gradient(145deg, #cfd4dd, #f6fdff);
+}
+
+.sidebar-links {
+  background: transparent;
+  box-shadow: 2px 2px 4px #8a8e94, -2px -2px 4px #ffffff;
+}
+
+.worktime-heading-div h2,
+.form-inputs {
+  border-radius: 50px;
+  background: var(--secondary);
+  box-shadow: inset 8px 8px 16px #9699a0, inset -8px -8px 16px #ffffff;
   transition: all 0.3s cubic-bezier(0.68, -0.6, 0.32, 1.6);
 }
 
-@media (min-width: 768px) {
-  .about div:hover {
-    border-radius: 50px;
-    background: linear-gradient(145deg, #f0f0f0, #cacaca);
-    box-shadow: 8px 8px 16px #bebebe, -8px -8px 16px #ffffff;
-    transform: scale(1.15);
-  }
-}
 
-.worktime-heading-div {
-  background: linear-gradient(145deg, #f0f0f0, #cacaca);
-  box-shadow: 8px 8px 16px #a8a8a8, -8px -8px 16px #ffffff;
-}
-
-.worktime-heading-div h2, .form-inputs {
-  border-radius: 50px;
-  background: #e0e0e0;
-  box-shadow: inset 8px 8px 16px #bebebe, inset -8px -8px 16px #ffffff;
-  transition: all 0.3s cubic-bezier(0.68, -0.6, 0.32, 1.6);
-}
 
 .clock-outline {
   border-radius: 50%;
-  background: linear-gradient(145deg, #f0f0f0, #cacaca);
-  box-shadow: 8px 8px 16px #a8a8a8, -8px -8px 16px #ffffff;
+  background: linear-gradient(145deg, #f6fdff, #cfd4dd);
+  box-shadow: 4px 4px 8px #8a8e94, -4px -4px 8px #ffffff;
 }
 
 .clock-inline {
-  background: url('./assets/logo.png');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
   border-radius: 50%;
-  box-shadow: inset 8px 8px 16px #a8a8a8, inset -8px -8px 16px #ffffff;
+  background: var(--secondary);
+  box-shadow: inset 4px 4px 8px #a8a8a8, inset -4px -4px 8px #ffffff;
 }
 
+.div-stt {
+  border-radius: 175px;
+  background: var(--secondary);
+  box-shadow: 5px 5px 10px #8a8e94, -5px -5px 10px #ffffff;
+}
+
+.scrollToTop {
+  border-radius: 175px;
+  background: linear-gradient(145deg, #f6fdff, #cfd4dd);
+}
+.scrollToTop:active {
+  border-radius: 175px;
+  background: linear-gradient(145deg, #cfd4dd, #f6fdff);
+}
+
+.mySwiper .scroll-down {
+  animation: bounce 1s linear infinite;
+  transition: transform 0.3s ease-in-out;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0) scale(2);
+  }
+  50% {
+    transform: translateY(-10px) scale(2);
+  }
+}
+
+.mySwiper .scroll-down:hover {
+  transform: translateY(-10px) scale(2.5);
+}
+
+.card-headings {
+  border: 2px solid var(--primary);
+  box-shadow: 4px 4px 8px #8a8e94, -4px -4px 8px #ffffff;
+}
