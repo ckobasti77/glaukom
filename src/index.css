@@ -297,8 +297,6 @@ body {
 }
 
 
-
-
 .form-submit {
   background: linear-gradient(145deg, #f6fdff, #cfd4dd);
   box-shadow: 3px 3px 6px #8a8e94, -3px -3px 6px #ffffff;
@@ -313,15 +311,11 @@ body {
   box-shadow: 2px 2px 4px #8a8e94, -2px -2px 4px #ffffff;
 }
 
-.worktime-heading-div h2,
 .form-inputs {
   border-radius: 50px;
   background: var(--secondary);
-  box-shadow: inset 8px 8px 16px #9699a0, inset -8px -8px 16px #ffffff;
   transition: all 0.3s cubic-bezier(0.68, -0.6, 0.32, 1.6);
 }
-
-
 
 .clock-outline {
   border-radius: 50%;

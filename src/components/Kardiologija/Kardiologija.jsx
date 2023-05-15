@@ -14,7 +14,7 @@ const jedan = [
 const Kardiologija = () => {
   return (
     <div className='flex flex-col'>
-      <div className="text-5xl bg-gradient-to-br py-4 from-[#2641c2] to-[#01bffd] rounded-b-3xl text-secondary text-center">
+      <div className="text-5xl bg-gradient-to-br py-4 from-[#2641c2] to-[#01bffd] rounded-b-3xl text-secondary text-center" data-aos="fade-down" data-aos-delay="300">
         Kardiologija
       </div>
       <img
@@ -29,7 +29,7 @@ const Kardiologija = () => {
         data-aos="zoom-in"
         data-aos-delay="300"
       >
-        <h2 className="text-center text-gradient mb-4 ">
+        <h2 className="text-center text-gradient mb-4">
         Opšta hirurgija
         </h2>
         <div className="text-fourth my-4 flex flex-col h-full justify-evenly gap-y-4">

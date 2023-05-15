@@ -16,7 +16,7 @@ const WorkTime = () => {
       ) {
         setIsWorking(true);
       } else if (
-        (currentDayOfWeek = 6 && currentHour >= 10 && currentHour <= 14)
+        (currentDayOfWeek === 6 && currentHour >= 10 && currentHour <= 14)
       ) {
         setIsWorking(true);
         setIsSaturday(true);

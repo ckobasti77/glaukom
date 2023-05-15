@@ -2,10 +2,10 @@ import React from 'react';
 import { Outlet } from "react-router-dom";
 import { Sidebar, Footer } from './components'
 
-const SharedLayout = () => {
+const SharedLayout = ({ scrollToTop }) => {
   return (
     <>
-      <Sidebar />
+      <Sidebar scrollToTop={scrollToTop} />
       <Outlet />
       <Footer />
     </>

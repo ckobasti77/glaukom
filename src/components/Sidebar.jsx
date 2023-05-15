@@ -17,7 +17,7 @@ let tabs = [
   { id: 8, label: "Kontakt", path:'/kontakt' },
 ];
 
-const Sidebar = () => {
+const Sidebar = ({ scrollToTop }) => {
   const [activeTab, setActiveTab] = useState(tabs[0].id);
 
   const sidebarRef = useRef(null);
@@ -28,12 +28,12 @@ const Sidebar = () => {
   useEffect(() => {
     const ruta = window.location.href.split('/').pop();
     const aktivnaRuta = tabs.findIndex(tab => tab.path === `/${ruta}`)
-    if (aktivnaRuta !== -1) {
-      setActiveTab(1)
+    if (aktivnaRuta === -1) {
+      setActiveTab(null)
     } else {
       setActiveTab(tabs[aktivnaRuta].id)
     }
-  }, [])
+  }, [tabs.findIndex(tab => tab.path === `/${window.location.href.split('/').pop()}`)])
   
 
   
@@ -67,16 +67,16 @@ const Sidebar = () => {
         navOpen
           ? "transform translate-x-0 nav"
           : "transform translate-x-[-100%]"
-      } text-fourth navigacija flex flex-col justify-between pt-16 pb-6 px-6 fixed h-screen w-[300px] rounded-none rounded-tr-3xl bg-secondary left-0 top-0 z-[999]`}
+      } text-fourth navigacija flex flex-col justify-between pt-16 pb-6 px-6 fixed h-screen w-[300px] rounded-none rounded-tr-3xl bg-secondary left-0 top-0 z-[1000]`}
 
     >
       <motion.label
         initial={{ opacity: 0, scale: 0, y: "-50px" }}
         animate={{ opacity: 1, scale: 0.75, y: 0 }}
-        transition={{ duration: 0.5, delay: 3 }}
+        transition={{ duration: 0.5, delay: 2 }}
         htmlFor="check"
         className={`${
-          !navOpen ? "xs:-right-[60px] bg-secondary transition-transform duration-300 transform scale-75 border-r-4 border-b-4 border-b-third border-r-third items-center -top-[9px] burger-label-aa" : "xs:-right-[2px] -top-[2px] overflow-hidden transform scale-0"
+          !navOpen ? "xs:-right-[60px] bg-secondary transition-transform cursor-pointer duration-300 transform scale-75 border-r-4 border-b-4 border-b-third border-r-third items-center -top-[9px] burger-label-aa" : "xs:-right-[2px] -top-[2px] overflow-hidden transform scale-0"
         } burger-label absolute  rounded-br-2xl -right-[60px]`}
       >
         <input
@@ -90,10 +90,13 @@ const Sidebar = () => {
         <span></span>
         <span></span>
       </motion.label>
-      <Link to="/" data-aos="fade-right" data-aos-delay="500" onClick={() => setActiveTab(1)}>
+      <Link to="/" data-aos="fade-right" data-aos-delay="500" onClick={() => {
+        setActiveTab(1)
+        scrollToTop()
+        }}>
         <img src={logo} alt="logo" className="transform xs:scale-[.8] "/>
       </Link>
-      <div className="flex flex-col gap-5">
+      <div className="flex flex-col gap-3 md:gap-5">
         {tabs.map((tab) => (
           <Link
             to={tab.path}
@@ -101,6 +104,7 @@ const Sidebar = () => {
             onClick={() => {
               setActiveTab(tab.id)
               setNavOpen(false);
+              scrollToTop()
             }}
             className={`${
               activeTab === tab.id ? "text-secondary" : "hover:opacity-75"

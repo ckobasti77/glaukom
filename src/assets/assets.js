@@ -24,6 +24,9 @@ import lvc from "./laser-vaskularni-centar.jpg";
 import dijagnostika from "./dijagnostika.jpg";
 import opsta from "./opsta-hirurgija-min.jpg";
 import kardiologija from "./kardiologija-min.jpg";
+import novo1 from "./novo1-min.jpg";
+import novo2 from "./novo2-min.png";
+import novo3 from "./novo3-min.jpg";
 
 export {
   logo,
@@ -52,5 +55,7 @@ export {
   dijagnostika,
   opsta,
   kardiologija,
-  
+  novo1,
+  novo2,
+  novo3,
 };

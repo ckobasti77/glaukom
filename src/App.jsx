@@ -26,6 +26,7 @@ function App() {
   Aos.init({
     duration: 500,
     delay: 150,
+    offset: 100,
   });
 
   // Loader
@@ -74,7 +75,7 @@ function App() {
       {loader && <Loader />}
       <Router>
         <Routes>
-          <Route path="/" element={<SharedLayout />}>
+          <Route path="/" element={<SharedLayout scrollToTop={scrollToTop} />}>
             <Route index element={<Home />} />
             <Route path="/ocna-poliklinika" element={<OcnaPoliklinika />} />
             <Route path="/glaukom" element={<Glaukom />} />

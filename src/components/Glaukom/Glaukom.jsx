@@ -31,10 +31,18 @@ const Glaukom = () => {
           data-aos="zoom-out-down"
           data-aos-delay="500"
         >
-          <h3 className="text-gradient text-center text-xl md:text-2xl lg:text-3xl">
+          <h3
+            className="text-gradient text-center text-xl md:text-2xl lg:text-3xl"
+            data-aos="fade-up"
+            data-aos-delay="700"
+          >
             Glaukom
           </h3>
-          <p className="text-lg md:text-xl lg:text-2xl">
+          <p
+            className="text-lg md:text-xl lg:text-2xl"
+            data-aos="fade-up"
+            data-aos-delay="900"
+          >
             Glaukom je jedan od vodećih uzroka slepila u svetu. Nastaje kad ima
             previše tečnosti u oku obično zato što su izvodni kanalići zapušeni.
             Pošto se tečnost koja ne može da istekne iz oka I dalje stvara, ona
@@ -56,12 +64,12 @@ const Glaukom = () => {
       <div
         className="md-div mx-4 lg:mx-16 flex flex-col lg:flex-row-reverse items-center justify-evenly my-16"
         data-aos="zoom-in-down"
-        data-aos-delay="400"
+        data-aos-delay="200"
       >
         <div
           className="md-div-inner bg-gradient-to-br from-[#2641c2] to-[#01bffd] my-20"
-          data-aos="zoom-in"
-          data-aos-delay="800"
+          data-aos="fade-up"
+          data-aos-delay="600"
         >
           <img
             src={glaukom2}
@@ -74,13 +82,21 @@ const Glaukom = () => {
         </div>
         <div
           className="md-div-inner w-5/6 lg:w-3/6 p-4 lg:p-12 flex flex-col gap-y-8 my-6"
-          data-aos="zoom-in-down"
-          data-aos-delay="1200"
+          data-aos="fade-up"
+          data-aos-delay="400"
         >
-          <h3 className="text-gradient text-xl md:text-2xl lg:text-3xl">
+          <h3
+            className="text-gradient text-xl md:text-2xl lg:text-3xl"
+            data-aos="fade-up"
+            data-aos-delay="800"
+          >
             Pregled glaukomatologa ass. Dr Vesna Marić
           </h3>
-          <p className="text-lg md:text-xl lg:text-2xl">
+          <p
+            className="text-lg md:text-xl lg:text-2xl"
+            data-aos="fade-up"
+            data-aos-delay="1000"
+          >
             Konsultant glaukomatolog je Ass. Dr Vesna Marić stalno zaposlena na
             Klinici za očne bolesti Kliničkog centra Srbije na odeljenju
             glaukoma. Bavi se dijagnostikom i lečenjem glaukoma kako kod
@@ -97,20 +113,20 @@ const Glaukom = () => {
       <div
         className="my-16 mx-4 lg:mx-16 flex flex-col flex-wrap md:flex-row md:items-center md-div p-8 gap-12"
         data-aos="zoom-in-down"
-        data-aos-delay="400"
+        data-aos-delay="200"
       >
         <img
           src={glaukom3}
           alt="glaukom"
           className="mx-auto w-5/6 lg:w-5/12 h-[500px] lg:h-[90vh] object-cover glaukom3 rounded-[25px]"
-          data-aos="zoom-in"
-          data-aos-delay="800"
+          data-aos="fade-up"
+          data-aos-delay="400"
         />
         <div className="mx-auto flex flex-col gap-y-6 xl:gap-y-12 w-5/6 lg:w-5/12">
           <div
             className="md-div-inner p-6 2xl:p-16 flex flex-col gap-6 2xl:gap-16"
-            data-aos="zoom-in"
-            data-aos-delay="1200"
+            data-aos="fade-up"
+            data-aos-delay="600"
           >
             <h3 className="text-gradient text-md md:text-xl lg:text-4xl">
               Vidno polje nezaobilazan pregled kod glaukoma
@@ -127,26 +143,44 @@ const Glaukom = () => {
           </div>
           <span
             className="bg-gradient-to-br from-[#2641c2] to-[#01bffd] text-secondary rounded-[25px] p-4 text-lg md:text-sm lg:text-2xl"
-            data-aos="zoom-in"
-            data-aos-delay="1600"
+            data-aos="fade-up"
+            data-aos-delay="800"
           >
             Test je bezbolan i bezbedan za pacijenta. Trajanje pregleda jednog
             oka je 10 do 15 min.
           </span>
         </div>
       </div>
-      <div className="my-16 mx-4 lg:mx-16 flex flex-col flex-wrap md:flex-row md:items-center md-div p-8 gap-12">
+      <div
+        className="my-16 mx-4 lg:mx-16 flex flex-col flex-wrap md:flex-row md:items-center md-div p-8 gap-12"
+        data-aos="zoom-in-down"
+        data-aos-delay="200"
+      >
         <img
           src={glaukom4}
           alt="glaukom"
           className="mx-auto w-5/6 lg:w-5/12 object-contain float-left glaukom3 rounded-[25px]"
+          data-aos="fade-up"
+          data-aos-delay="400"
         />
         <div className="mx-auto flex flex-col gap-y-6 xl:gap-y-12 w-5/6 lg:w-5/12">
-          <div className="md-div-inner p-6 2xl:p-16 flex flex-col gap-6 2xl:gap-16">
-            <h3 className="text-gradient text-md md:text-xl lg:text-4xl">
+          <div
+            className="md-div-inner p-6 2xl:p-16 flex flex-col gap-6 2xl:gap-16"
+            data-aos="fade-up"
+            data-aos-delay="600"
+          >
+            <h3
+              className="text-gradient text-md md:text-xl lg:text-4xl"
+              data-aos="fade-up"
+              data-aos-delay="800"
+            >
               OCT kod glaukoma
             </h3>
-            <p className="text-sm md:text-lg 2xl:text-xl">
+            <p
+              className="text-sm md:text-lg 2xl:text-xl"
+              data-aos="fade-up"
+              data-aos-delay="1000"
+            >
               OCT (Optička Koherentna Tomografija) je neinvazivna metoda
               pregleda, koja omogućava vidljivost svih slojeva retine i vidnog
               živca. Pomaže u otkrivanju ranih promena u sloju nervnih vlakana
@@ -156,7 +190,11 @@ const Glaukom = () => {
               ima ili nema glaukom.
             </p>
           </div>
-          <span className="bg-gradient-to-br from-[#2641c2] to-[#01bffd] text-secondary rounded-[25px] p-4 text-lg md:text-sm lg:text-2xl">
+          <span
+            className="bg-gradient-to-br from-[#2641c2] to-[#01bffd] text-secondary rounded-[25px] p-4 text-lg md:text-sm lg:text-2xl"
+            data-aos="fade-up"
+            data-aos-delay="1200"
+          >
             Procedura je bezbolna i traje nekoliko minuta.
           </span>
         </div>

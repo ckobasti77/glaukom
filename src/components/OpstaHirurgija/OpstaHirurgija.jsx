@@ -18,7 +18,7 @@ const jedan = [
 const OpstaHirurgija = () => {
   return (
     <div className='flex flex-col'>
-      <div className="text-5xl bg-gradient-to-br py-4 from-[#2641c2] to-[#01bffd] rounded-b-3xl text-secondary text-center">
+      <div className="text-5xl bg-gradient-to-br py-4 from-[#2641c2] to-[#01bffd] rounded-b-3xl text-secondary text-center" data-aos="fade-down" data-aos-delay="300">
         Opšta hirurgija
       </div>
       <img

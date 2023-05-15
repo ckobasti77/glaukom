@@ -26,16 +26,16 @@ const Contact = () => {
                 data-aos="fade-down"
                 data-aos-delay="300"
               >
-                <div class="form-divs relative">
+                <div className="form-divs relative">
                   <input
                     type="text"
                     id="floating_outlined"
-                    class="form-inputs block px-4 py-4 w-full text-sm text-fourth bg-secondary rounded-lg appearance-none border-0 focus:outline-none focus:ring-0 focus:form-inputs peer"
+                    className="form-inputs block px-4 py-4 w-full text-sm text-fourth bg-secondary rounded-lg appearance-none border-0 focus:outline-none focus:ring-0 focus:form-inputs peer"
                     placeholder=" "
                   />
                   <label
                     htmlFor="floating_outlined"
-                    class="absolute text-sm text-gray-500 duration-300 transform -translate-y-7 scale-75 top-2 z-10 origin-[0] px-2 peer-focus:px-2 peer-focus:text-primary  peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-7 left-1"
+                    className="absolute text-sm text-gray-500 duration-300 transform -translate-y-7 scale-75 top-2 z-10 origin-[0] px-2 peer-focus:px-2 peer-focus:text-primary  peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-7 left-1"
                   >
                     Vaše ime
                   </label>
@@ -46,16 +46,16 @@ const Contact = () => {
                 data-aos="fade-down"
                 data-aos-delay="400"
               >
-                <div class="form-divs relative">
+                <div className="form-divs relative">
                   <input
                     type="text"
                     id="floating_outlined2"
-                    class="form-inputs block px-4 py-4 w-full text-sm text-fourth bg-secondary rounded-lg appearance-none border-0 focus:outline-none focus:ring-0 focus:form-inputs peer"
+                    className="form-inputs block px-4 py-4 w-full text-sm text-fourth bg-secondary rounded-lg appearance-none border-0 focus:outline-none focus:ring-0 focus:form-inputs peer"
                     placeholder=" "
                   />
                   <label
                     htmlFor="floating_outlined2"
-                    class="absolute text-sm text-gray-500 duration-300 transform -translate-y-7 scale-75 top-2 z-10 origin-[0] px-2 peer-focus:px-2 peer-focus:text-primary peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-7 left-1"
+                    className="absolute text-sm text-gray-500 duration-300 transform -translate-y-7 scale-75 top-2 z-10 origin-[0] px-2 peer-focus:px-2 peer-focus:text-primary peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-7 left-1"
                   >
                     Vaše prezime
                   </label>
@@ -67,17 +67,17 @@ const Contact = () => {
               data-aos="fade-down"
               data-aos-delay="500"
             >
-              <div class="form-divs relative">
+              <div className="form-divs relative">
                 <textarea
                   type="text"
                   id="floating_outlined3"
-                  class="form-inputs block px-4 py-4 w-full text-sm text-fourth bg-secondary rounded-lg border-0 appearance-none focus:outline-none focus:ring-0  peer"
+                  className="form-inputs block px-4 py-4 w-full text-sm text-fourth bg-secondary rounded-lg border-0 appearance-none focus:outline-none focus:ring-0 peer"
                   placeholder=" "
                   rows={3}
                 />
                 <label
                   htmlFor="floating_outlined3"
-                  class="absolute text-sm text-gray-500 duration-300 transform -translate-y-7 scale-75 top-2 z-10 origin-[0] px-2 peer-focus:px-2 peer-focus:text-primary peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-7 left-1"
+                  className="absolute text-sm text-gray-500 duration-300 transform -translate-y-7 scale-75 top-2 z-10 origin-[0] px-2 peer-focus:px-2 peer-focus:text-primary peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-7 left-1"
                 >
                   Vaša poruka
                 </label>

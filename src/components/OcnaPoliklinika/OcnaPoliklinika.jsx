@@ -38,11 +38,11 @@ const [activeImg, setActiveImg] = useState(null)
         {
           cards.map(card => (
             <div key={card.id} className="md-div border-2 border-primary mx-auto w-11/12 sm:w-[500px] my-4 flex flex-col justify-between gap-8" data-aos="zoom-in" data-aos-delay={200 * card.delay}>
-              <img src={card.img} onClick={() => setActiveImg(card.id - 1)} alt="ocna-poliklinika" className="ocna2 hover:opacity-[.65] transition-all duration-150 cursor-zoom-in rounded-[45px] m-5 object-cover h-[260px]"/>
+              <img src={card.img} onClick={() => setActiveImg(card.id - 1)} alt="ocna-poliklinika" className="ocna2 hover:opacity-[.65] transition-all duration-150 cursor-zoom-in rounded-[45px] m-5 object-cover h-[260px]"  data-aos="fade-up" data-aos-delay={300 * card.delay}/>
               <div className="p-10 flex flex-col gap-10 h-full">
-                <h3 className="card-headings text-xl bg-gradient-to-br from-[#2641c2] to-[#01bffd] rounded-xl text-secondary px-4 py-2"><BsFillEyeFill className="inline mr-2" data-aos="zoom-in" data-aos-delay={400 * card.delay}/>{card.text1}</h3>
-                <h3 className="card-headings text-xl bg-gradient-to-br from-[#2641c2] to-[#01bffd] rounded-xl text-secondary px-4 py-2"><BsFillEyeFill className="inline mr-2" data-aos="zoom-in" data-aos-delay={600 * card.delay}/>{card.text2}</h3>
-                {card.text3 && <h3 className="card-headings text-xl bg-gradient-to-br from-[#2641c2] to-[#01bffd] rounded-xl text-secondary px-4 py-2"><BsFillEyeFill className="inline mr-2" data-aos="zoom-in" data-aos-delay={800 * card.delay}/>{card.text3}</h3>}
+                <p className="card-headings text-xl bg-gradient-to-br from-[#2641c2] to-[#01bffd] rounded-xl text-secondary px-4 py-2" data-aos="fade-up" data-aos-delay={400 * card.delay}><BsFillEyeFill className="inline mr-2"/>{card.text1}</p>
+                <p className="card-headings text-xl bg-gradient-to-br from-[#2641c2] to-[#01bffd] rounded-xl text-secondary px-4 py-2" data-aos="fade-up" data-aos-delay={500 * card.delay}><BsFillEyeFill className="inline mr-2"/>{card.text2}</p>
+                {card.text3 && <p className="card-headings text-xl bg-gradient-to-br from-[#2641c2] to-[#01bffd] rounded-xl text-secondary px-4 py-2" data-aos="fade-up" data-aos-delay={600 * card.delay}><BsFillEyeFill className="inline mr-2"/>{card.text3}</p>}
               </div>
             </div>
           ))
