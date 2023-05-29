@@ -34,15 +34,25 @@ const WorkTime = () => {
       >
         Radno vreme
       </h2>
-      <div className="flex flex-col items-center flex-wrap gap-4">
+      <div className="flex flex-col items-start flex-wrap gap-4">
+        <div className="flex justify-around gap-5 w-full mb-6 xl:mb-0">
         <h3
-          className="text-[.75rem] md:text-xl mb-6 xl:mb-0 whitespace-nowrap py-4 px-8 dani rounded-full p-[1px]"
+          className="text-[.75rem] text-gradient md:text-xl mb-6 xl:mb-0 whitespace-nowrap py-4 px-8 dani rounded-full p-[1px]"
           data-aos="zoom-in"
           data-aos-delay="200"
         >
           Ponedeljak-petak
         </h3>
-        <div className="flex justify-evenly w-full mb-6 xl:mb-0">
+          <h3
+            className={`${!isSaturday ? "visible" : "hidden"} ${
+              isWorking ? "text-green-500" : "text-red-700"
+            } dani text-[.75rem] hidden md:visible md:text-lg whitespace-nowrap px-8 py-4 rounded-full p-[1px] `}
+            title={isWorking ? "Zatvara se u 18:00" : "Otvara se sutra u 10:00"}
+            data-aos="zoom-in"
+            data-aos-delay="400"
+          >
+            {!isSaturday && (isWorking ? "Otvoreno" : "Zatvoreno")}
+          </h3>
           <h3
             className="dani text-[.75rem] md:text-lg whitespace-nowrap px-8 py-4 rounded-full p-[1px]"
             data-aos="zoom-in"
@@ -50,38 +60,21 @@ const WorkTime = () => {
           >
             10:00 - 18:00
           </h3>
+        </div>
+      </div>
+      <div className="flex flex-col items-start flex-wrap gap-4">
+        <div className="flex justify-around gap-5 w-full mb-6 xl:mb-0">
           <h3
-            className={`${!isSaturday ? "visible" : "hidden"} ${
-              isWorking ? "text-green-500" : "text-red-700"
-            } dani text-[.75rem] md:text-lg whitespace-nowrap px-8 py-4 rounded-full p-[1px] `}
-            title={isWorking ? "Zatvara se u 18:00" : "Otvara se sutra u 10:00"}
+            className="text-[.75rem] text-gradient mb-6 xl:mb-0 md:text-xl whitespace-nowrap py-4 px-8 dani rounded-full p-[1px]"
             data-aos="zoom-in"
             data-aos-delay="400"
           >
-            {!isSaturday && (isWorking ? "Otvoreno" : "Zatvoreno")}
-          </h3>
-        </div>
-      </div>
-      <div className="flex flex-col items-center flex-wrap gap-4">
-        <h3
-          className="text-[.75rem] mb-6 xl:mb-0 md:text-xl whitespace-nowrap py-4 px-8 dani rounded-full p-[1px]"
-          data-aos="zoom-in"
-          data-aos-delay="400"
-        >
-          Subota
-        </h3>
-        <div className="flex justify-evenly w-full mb-6 xl:mb-0">
-          <h3
-            className="dani text-[.75rem] md:text-lg whitespace-nowrap px-8 py-4 rounded-full p-[1px]"
-            data-aos="zoom-in"
-            data-aos-delay="600"
-          >
-            10:00 - 14:00
+            Subota
           </h3>
           <h3
             className={`${isSaturday ? "visible" : "hidden"} ${
               isWorking ? "text-green-500" : "text-red-700"
-            } dani text-[.75rem] md:text-lg whitespace-nowrap px-8 py-4 rounded-full p-[1px] `}
+            } dani text-[.75rem] hidden md:visible md:text-lg whitespace-nowrap px-8 py-4 rounded-full p-[1px] `}
             title={
               isWorking
                 ? "Zatvara se u 14:00"
@@ -92,6 +85,13 @@ const WorkTime = () => {
           >
             {isSaturday && (isWorking ? "Otvoreno" : "Zatvoreno")}
           </h3>
+          <h3
+            className="dani text-[.75rem] md:text-lg whitespace-nowrap px-8 py-4 rounded-full p-[1px]"
+            data-aos="zoom-in"
+            data-aos-delay="600"
+          >
+            10:00 - 14:00
+          </h3>
         </div>
       </div>
       <div
@@ -99,7 +99,7 @@ const WorkTime = () => {
         data-aos="zoom-in"
         data-aos-delay="800"
       >
-        <h3 className="text-[.75rem] mb-6 xl:mb-0 md:text-xl whitespace-nowrap py-4 px-8 dani rounded-full p-[1px]">
+        <h3 className="text-[.75rem] text-gradient mb-6 xl:mb-0 md:text-xl whitespace-nowrap py-4 px-8 dani rounded-full p-[1px]">
           Nedeljom ne radimo
         </h3>
       </div>
