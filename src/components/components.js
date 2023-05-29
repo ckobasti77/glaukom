@@ -19,28 +19,31 @@ import Carousel from "./Home/Carousel";
 import About from "./Home/About";
 import WorkTime from "./Home/WorkTime";
 import WorktimeMap from "./Home/WorktimeMap";
+import LaserskiTretman from "./LaserskiTretman/LaserskiTretman";
+import EstetskaMedicina from "./EstetskaMedicina/EstetskaMedicina";
 
 export {
-    Sidebar,
-    Home,
-    Loader,
-    Carousel,
-    SharedLayout,
-    About,
-    Map,
-    WorkTime,
-    WorktimeMap,
-    OcnaPoliklinika,
-    Glaukom,
-    LaserVaskularniCentar,
-    OpstaHirurgija,
-    Kardiologija,
-    Dijagnostika,
-    Contact,
-    Footer,
-    LaserskoLecenjeGlaukoma,
-    FullContactInfo,
-    Novo,
-    ZakaziPregled,
-    
-}
+  Sidebar,
+  Home,
+  Loader,
+  Carousel,
+  SharedLayout,
+  About,
+  Map,
+  WorkTime,
+  WorktimeMap,
+  OcnaPoliklinika,
+  Glaukom,
+  LaserVaskularniCentar,
+  OpstaHirurgija,
+  Kardiologija,
+  Dijagnostika,
+  Contact,
+  Footer,
+  LaserskoLecenjeGlaukoma,
+  FullContactInfo,
+  Novo,
+  ZakaziPregled,
+  LaserskiTretman,
+  EstetskaMedicina,
+};

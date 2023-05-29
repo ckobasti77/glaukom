@@ -14,7 +14,9 @@ let tabs = [
   { id: 5, label: "Opšta hirurgija", path:'/opsta-hirurgija' },
   { id: 6, label: "Kardiologija", path:'/kardiologija' },
   { id: 7, label: "Dijagnostika", path:'/dijagnostika' },
-  { id: 8, label: "Kontakt", path:'/kontakt' },
+  { id: 8, label: "Laserski tretman", path:'/laserski-tretman' },
+  { id: 9, label: "Estetska medicina", path:'/estetska-medicina' },
+  { id: 10, label: "Kontakt", path:'/kontakt' },
 ];
 
 const Sidebar = ({ scrollToTop }) => {
@@ -67,7 +69,7 @@ const Sidebar = ({ scrollToTop }) => {
         navOpen
           ? "transform translate-x-0 nav"
           : "transform translate-x-[-100%]"
-      } text-fourth navigacija flex flex-col justify-between pt-16 pb-6 px-6 fixed h-screen w-[300px] rounded-none rounded-tr-3xl bg-secondary left-0 top-0 z-[1000]`}
+      } text-fourth navigacija flex flex-col justify-between pt-16 pb-6 px-6 fixed h-screen w-[300px] rounded-none rounded-tr-3xl bg-secondary left-0 top-0 z-[1001]`}
 
     >
       <motion.label
@@ -96,7 +98,7 @@ const Sidebar = ({ scrollToTop }) => {
         }}>
         <img src={logo} alt="logo" className="transform xs:scale-[.8] "/>
       </Link>
-      <div className="flex flex-col gap-3 md:gap-5">
+      <div className="flex flex-col gap-2">
         {tabs.map((tab) => (
           <Link
             to={tab.path}

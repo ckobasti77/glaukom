@@ -8,7 +8,8 @@ const jedan = [
   {id: 2, text: 'Laserski tretman bolesnih perforatornih vena'},
   {id: 3, text: 'Laserski tretman hemoroida'},
   {id: 4, text: 'Klasična operacija vena'},
-  {id: 5, text: 'Tretman venskog ulkusa'}
+  {id: 5, text: 'Tretman venskog ulkusa'},
+  {id: 6, text: 'Lasersko uklanjanje kapilara'},
 ]
 
 const dva = [

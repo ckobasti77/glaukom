@@ -14,6 +14,8 @@ import {
   Kardiologija,
   Dijagnostika,
   LaserskoLecenjeGlaukoma,
+  LaserskiTretman,
+  EstetskaMedicina,
 } from "./components/components";
 
 import Aos from "aos";
@@ -26,7 +28,7 @@ function App() {
   Aos.init({
     duration: 500,
     delay: 150,
-    offset: 100,
+    offset: 0,
   });
 
   // Loader
@@ -83,6 +85,8 @@ function App() {
             <Route path="/opsta-hirurgija" element={<OpstaHirurgija />} />
             <Route path="/kardiologija" element={<Kardiologija />} />
             <Route path="/dijagnostika" element={<Dijagnostika />} />
+            <Route path="/laserski-tretman" element={<LaserskiTretman />} />
+            <Route path="/estetska-medicina" element={<EstetskaMedicina />} />
             <Route path="/kontakt" element={<FullContactInfo />} />
             <Route path="/lasersko-lecenje-glaukoma" element={<LaserskoLecenjeGlaukoma />} />
           </Route>

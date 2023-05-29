@@ -10,12 +10,12 @@ import carousel8 from "./home-carousel/carousel-8-min.jpg";
 import carousel9 from "./home-carousel/carousel-9-min.jpg";
 import carousel10 from "./home-carousel/carousel-10-min.jpg";
 import ocna1 from "./ocna-poliklinika/ocna-poliklinika-1-min.jpg";
-import ocna2 from "./ocna-poliklinika/ocna-poliklinika-2-min.jpg";
-import ocna3 from "./ocna-poliklinika/ocna-poliklinika-3-min.jpg";
+// import ocna2 from "./ocna-poliklinika/ocna-poliklinika-2-min.jpg";
+// import ocna3 from "./ocna-poliklinika/ocna-poliklinika-3-min.jpg";
 import ocna4 from "./ocna-poliklinika/ocna-poliklinika-4-min.jpg";
 import ocna5 from "./ocna-poliklinika/ocna-poliklinika-5-min.jpg";
 import ocna6 from "./ocna-poliklinika/ocna-poliklinika-6-min.jpg";
-import ocna7 from "./ocna-poliklinika/ocna-poliklinika-7-min.jpg";
+// import ocna7 from "./ocna-poliklinika/ocna-poliklinika-7-min.jpg";
 import glaukom1 from "./glaukom/glaukom-1-min.jpg";
 import glaukom2 from "./glaukom/glaukom-2-min.jpg";
 import glaukom3 from "./glaukom/glaukom-3-min.jpg";
@@ -41,12 +41,12 @@ export {
   carousel9,
   carousel10,
   ocna1,
-  ocna2,
-  ocna3,
+  // ocna2,
+  // ocna3,
   ocna4,
   ocna5,
   ocna6,
-  ocna7,
+  // ocna7,
   glaukom1,
   glaukom2,
   glaukom3,

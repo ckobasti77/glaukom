@@ -95,14 +95,14 @@ const Contact = () => {
           </form>
         </div>
         <div
-          className="w-5/6 md:w-2/6 relative flex flex-col items-center h-[500px] justify-between mx-auto my-12 md-div p-12"
+          className="w-5/6 md:w-2/6 relative flex flex-col items-center h-[500px] justify-center mx-auto my-12 md-div p-12"
           data-aos="zoom-in"
           data-aos-delay="200"
         >
           <span className="absolute -top-10 pozovite mx-auto rounded-t-xl bg-secondary py-4 px-8 text-xl">Pozovite</span>
           <a
             href="tel:+381 11 344 76 77"
-            className="dani text-lg px-4 py-2 rounded-full w-[220px] text-center flex gap-x-2 items-center justify-between hover:bg-gradient-to-br hover:from-[#2641c2] hover:to-[#01bffd] hover:text-secondary group"
+            className="dani text-lg my-4 px-4 py-2 rounded-full w-[220px] text-center flex gap-x-2 items-center justify-between hover:bg-gradient-to-br hover:from-[#2641c2] hover:to-[#01bffd] hover:text-secondary group"
              data-aos="fade-down"
               data-aos-delay="300"
           >
@@ -110,43 +110,19 @@ const Contact = () => {
           </a>
           <a
             href="tel:+381 11 24 00 937"
-            className="dani text-lg px-4 py-2 rounded-full w-[220px] text-center flex gap-x-2 items-center justify-between hover:bg-gradient-to-br hover:from-[#2641c2] hover:to-[#01bffd] hover:text-secondary group"
+            className="dani text-lg my-4 px-4 py-2 rounded-full w-[220px] text-center flex gap-x-2 items-center justify-between hover:bg-gradient-to-br hover:from-[#2641c2] hover:to-[#01bffd] hover:text-secondary group"
              data-aos="fade-down"
               data-aos-delay="350"
           >
-            <BsTelephoneFill className="text-fourth group-hover:fill-secondary" /> +381 11 24 00 937
+            <BsPhoneFill className="text-fourth group-hover:fill-secondary" /> +381 65 344 66 77
           </a>
           <a
-            href="tel:+381  65 344 76 77"
-            className="dani text-lg px-4 py-2 rounded-full w-[220px] text-center flex gap-x-2 items-center justify-between hover:bg-gradient-to-br hover:from-[#2641c2] hover:to-[#01bffd] hover:text-secondary group"
+            href="tel:+381 65 344 76 77"
+            className="dani text-lg my-4 px-4 py-2 rounded-full w-[220px] text-center flex gap-x-2 items-center justify-between hover:bg-gradient-to-br hover:from-[#2641c2] hover:to-[#01bffd] hover:text-secondary group"
              data-aos="fade-down"
               data-aos-delay="400"
           >
-            <BsPhoneFill className="text-fourth group-hover:fill-secondary" /> +381 65 344 76 77
-          </a>
-          <a
-            href="tel:+381 64 180 66 56"
-            className="dani text-lg px-4 py-2 rounded-full w-[220px] text-center flex gap-x-2 items-center justify-between hover:bg-gradient-to-br hover:from-[#2641c2] hover:to-[#01bffd] hover:text-secondary group"
-             data-aos="fade-down"
-              data-aos-delay="450"
-          >
-            <BsPhoneFill className="text-fourth group-hover:fill-secondary" /> +381 64 180 66 56
-          </a>
-          <a
-            href="tel:+381 64 84 31 063"
-            className="dani text-lg px-4 py-2 rounded-full w-[220px] text-center flex gap-x-2 items-center justify-between hover:bg-gradient-to-br hover:from-[#2641c2] hover:to-[#01bffd] hover:text-secondary group"
-             data-aos="fade-down"
-              data-aos-delay="500"
-          >
-            <BsPhoneFill className="text-fourth group-hover:fill-secondary" /> +381 64 84 31 063
-          </a>
-          <a
-            href="+381 63 233 716"
-            className="dani text-lg px-4 py-2 rounded-full w-[220px] text-center flex gap-x-2 items-center justify-between hover:bg-gradient-to-br hover:from-[#2641c2] hover:to-[#01bffd] hover:text-secondary group"
-             data-aos="fade-down"
-              data-aos-delay="550"
-          >
-            <BsPhoneFill className="text-fourth group-hover:fill-secondary" /> +381 63 233 716
+            <BsPhoneFill className="text-fourth group-hover:fill-secondary" /> +381 64 180 66 65
           </a>
         </div>
       </div>

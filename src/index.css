@@ -49,6 +49,11 @@ body {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+.swiper-slide {
+  background: radial-gradient(ellipse at top left, hsl(195, 99%, 60%), transparent),
+    radial-gradient(ellipse at bottom right, #01bffd, transparent);
+}
+
 .burger-label {
   display: flex;
   flex-direction: column;
@@ -67,7 +72,13 @@ body {
 }
 
 .gradient-hover {
-  background-image: linear-gradient(to right, #2641c2, #01bffd, #2641c2, #01bffd);
+  background-image: linear-gradient(
+    to right,
+    #2641c2,
+    #01bffd,
+    #2641c2,
+    #01bffd
+  );
   box-shadow: 4px 4px 8px #8a8e94, -4px -4px 8px #ffffff;
   border: 2px solid var(--primary);
   background-size: 300% 100%;
@@ -262,9 +273,8 @@ body {
   border: 2px solid var(--secondary);
 }
 
-
 .pozovite {
-  box-shadow: -0px -12px 16px  #ffffff;
+  box-shadow: -0px -12px 16px #ffffff;
 }
 
 .md-heading {
@@ -295,7 +305,6 @@ body {
   border: 2px solid var(--secondary);
   box-shadow: 4px 4px 8px #8a8e94, -4px -4px 8px #ffffff;
 }
-
 
 .form-submit {
   background: linear-gradient(145deg, #f6fdff, #cfd4dd);

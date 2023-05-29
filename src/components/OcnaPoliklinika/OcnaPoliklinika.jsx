@@ -6,23 +6,23 @@ import { ZakaziPregled } from '../components';
 
 import {
   ocna1,
-  ocna2,
-  ocna3,
-  ocna4,
-  ocna5,
-  ocna6,
-  ocna7,
+  // ocna2,
+  // ocna3,
+  // ocna4,
+  // ocna5,
+  // ocna6,
+  // ocna7,
 } from "../../assets/assets";
 import { Novo } from "../components";
 
 
 let cards = [
-  { id: 1, img: ocna2, delay: 1, text1:'Specijalistički pregled: opšti pregled na biomikroskopu, merenje očnog pritiska, pregled očnog dna', text2: 'Sistematski pregledi dece i odraslih' },
-  { id: 2, img: ocna3, delay: 2, text1:'Prepisivanje naočara i kontaktnih sočiva', text2: 'Obuka za nošenje kontaktnih sočiva i redovni pregledi i praćenje nosioca kontaktnih sočiva' },
-  { id: 3, img: ocna4, delay: 3, text1:'Preporuka lekara za odgovarajuću vrstu dioptrijskih stakala', text2: 'Kompjutersko određivanje dioptrije, provera vida na daljinu i blizinu' },
-  { id: 4, img: ocna5, delay: 1, text1:'Pregledi dece uz kompletnu obradu na razrokost i slabovidost', text2: 'Lečenje razrokosti i slabovidosti', text3: 'Ortoptičko/pleoptičke vežbe' },
-  { id: 5, img: ocna6, delay: 2, text1:'Lečenje poremećaja vida uzrokovanih dugotrajnim radom na računaru', text2: 'Komjuterizovano vidno polje (KVP)', text3: 'Optička koherentna tomografija (OCT)' },
-  { id: 6, img: ocna7, delay: 3, text1:'Uzimanje brisa oka i analiza brisa oka sa antibiogramom', text2: 'Male intervencije/operacije na kapcima i propiranje suznih kanala', text3: 'Subspecijalistički pregledi: za glaukom, bolesti retine i žute mrlje, zapaljenje oka' },
+  { id: 1, delay: 1, text1:'Specijalistički pregled: opšti pregled na biomikroskopu, merenje očnog pritiska, pregled očnog dna', text2: 'Sistematski pregledi dece i odraslih' },
+  { id: 2, delay: 2, text1:'Prepisivanje naočara i kontaktnih sočiva', text2: 'Obuka za nošenje kontaktnih sočiva i redovni pregledi i praćenje nosioca kontaktnih sočiva' },
+  { id: 3, delay: 3, text1:'Preporuka lekara za odgovarajuću vrstu dioptrijskih stakala', text2: 'Kompjutersko određivanje dioptrije, provera vida na daljinu i blizinu' },
+  { id: 4, delay: 1, text1:'Pregledi dece uz kompletnu obradu na razrokost i slabovidost', text2: 'Lečenje razrokosti i slabovidosti', text3: 'Ortoptičko/pleoptičke vežbe' },
+  { id: 5, delay: 2, text1:'Lečenje poremećaja vida uzrokovanih dugotrajnim radom na računaru', text2: 'Komjuterizovano vidno polje (KVP)', text3: 'Optička koherentna tomografija (OCT)' },
+  { id: 6, delay: 3, text1:'Uzimanje brisa oka i analiza brisa oka sa antibiogramom', text2: 'Male intervencije/operacije na kapcima i propiranje suznih kanala', text3: 'Subspecijalistički pregledi: za glaukom, bolesti retine i žute mrlje, zapaljenje oka' },
 ];
 
 const OcnaPoliklinika = () => {
@@ -38,7 +38,7 @@ const [activeImg, setActiveImg] = useState(null)
         {
           cards.map(card => (
             <div key={card.id} className="md-div border-2 border-primary mx-auto w-11/12 sm:w-[500px] my-4 flex flex-col justify-between gap-8" data-aos="zoom-in" data-aos-delay={200 * card.delay}>
-              <img src={card.img} onClick={() => setActiveImg(card.id - 1)} alt="ocna-poliklinika" className="ocna2 hover:opacity-[.65] transition-all duration-150 cursor-zoom-in rounded-[45px] m-5 object-cover h-[260px]"  data-aos="fade-up" data-aos-delay={300 * card.delay}/>
+              {/* <img src={card.img} onClick={() => setActiveImg(card.id - 1)} alt="ocna-poliklinika" className="ocna2 hover:opacity-[.65] transition-all duration-150 cursor-zoom-in rounded-[45px] m-5 object-cover h-[260px]"  data-aos="fade-up" data-aos-delay={300 * card.delay}/> */}
               <div className="p-10 flex flex-col gap-10 h-full">
                 <p className="card-headings text-xl bg-gradient-to-br from-[#2641c2] to-[#01bffd] rounded-xl text-secondary px-4 py-2" data-aos="fade-up" data-aos-delay={400 * card.delay}><BsFillEyeFill className="inline mr-2"/>{card.text1}</p>
                 <p className="card-headings text-xl bg-gradient-to-br from-[#2641c2] to-[#01bffd] rounded-xl text-secondary px-4 py-2" data-aos="fade-up" data-aos-delay={500 * card.delay}><BsFillEyeFill className="inline mr-2"/>{card.text2}</p>
