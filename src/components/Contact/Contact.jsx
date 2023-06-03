@@ -106,7 +106,7 @@ const Contact = () => {
              data-aos="fade-down"
               data-aos-delay="300"
           >
-            <BsTelephoneFill className="text-fourth group-hover:fill-secondary" /> +381 11 344 76 77
+            <BsTelephoneFill className="text-fourth group-hover:fill-secondary" /> +381 64 344 76 77
           </a>
           <a
             href="tel:+381 11 24 00 937"

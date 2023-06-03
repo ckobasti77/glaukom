@@ -5,7 +5,7 @@ import { ZakaziPregled } from '../components';
 import { Helmet } from 'react-helmet';
 
 const jedan = [
-  { id: 1, text: "kidanje konaca" },
+  { id: 1, text: "Skidanje konaca" },
   { id: 2, text: "Previjanje malih rana" },
   { id: 3, text: "Previjanje velikih rana" },
   { id: 4, text: "Obrada i šivenje rana - Hirurška obrada rane i šivenje rane u uslovima lokalne anestezije." },
