@@ -55,7 +55,7 @@ const About = () => {
             Od 2015. godine <span className="text-gradient">JATROS</span>{" "}
             poliklinika pruža usluge oftalmologije, hirurgije, vaskularne
             hirurgije i interne medicine (kardiologija). Opremljeni smo
-            savremenin medicinskim aparatima i uređajima, međutim vreme koje smo
+            savremenim medicinskim aparatima i uređajima, međutim vreme koje smo
             spremni da posvetimo svakom pacijentu i njegovom zdravstvenom
             problemu je nešto što mislimo, da je pored profesionalnosti, ključno
             za uspešno dijagnostikovanje i lečenje. Operaciona sala radi po

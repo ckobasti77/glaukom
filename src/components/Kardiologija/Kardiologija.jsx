@@ -2,6 +2,7 @@ import React from 'react';
 
 import { kardiologija } from '../../assets/assets';
 import { ZakaziPregled } from '../components';
+import { Helmet } from 'react-helmet';
 
 const jedan = [
   { id: 1, text: "Pregled interniste kardiologa" },
@@ -14,6 +15,15 @@ const jedan = [
 const Kardiologija = () => {
   return (
     <div className='flex flex-col'>
+      <Helmet>
+      <title>Kardiologija</title>
+        <meta
+          name="description"
+          content="Lečenje malignih poremećaja ritma srčanog rada..."
+        />
+        <link rel="canonical" href="https://poliklinikajatros.com/kardiologija" />
+        <meta property="" />
+      </Helmet>
       <div className="text-5xl bg-gradient-to-br py-4 from-[#2641c2] to-[#01bffd] rounded-b-3xl text-secondary text-center" data-aos="fade-down" data-aos-delay="300">
         Kardiologija
       </div>

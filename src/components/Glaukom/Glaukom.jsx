@@ -5,12 +5,22 @@ import { Novo, ZakaziPregled } from "../components";
 import { Link } from "react-router-dom";
 
 import { BsFillArrowRightCircleFill } from "react-icons/bs";
+import { Helmet } from "react-helmet";
 const Glaukom = () => {
   return (
     <section
       id="glaukom"
       className="overflow-y-hidden flex flex-col items-center"
     >
+      <Helmet>
+      <title>Glaukom</title>
+        <meta
+          name="description"
+          content="Konsultant glaukomatolog je Ass. Dr Vesna Marić stalno zaposlena na Klinici za očne bolesti Kliničkog centra Srbije na odeljenju glaukoma..."
+        />
+        <link rel="canonical" href="https://poliklinikajatros.com/glaukom" />
+        <meta property="" />
+      </Helmet>
       <div
         className="sticky top-0 w-screen overflow-y-hidden z-[99] text-2xl md:text-3xl lg:text-4xl xl:text-5xl bg-gradient-to-br py-4 from-[#2641c2] to-[#01bffd] rounded-b-3xl text-secondary text-center"
         data-aos="fade-down"

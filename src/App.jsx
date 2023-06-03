@@ -21,8 +21,6 @@ import {
 import Aos from "aos";
 import "aos/dist/aos.css";
 
-import 'react-fancybox/lib/fancybox.css'
-
 function App() {
   // Aos
   Aos.init({

@@ -2,6 +2,7 @@ import React from 'react'
 
 import { opsta } from '../../assets/assets';
 import { ZakaziPregled } from '../components';
+import { Helmet } from 'react-helmet';
 
 const jedan = [
   { id: 1, text: "kidanje konaca" },
@@ -18,6 +19,15 @@ const jedan = [
 const OpstaHirurgija = () => {
   return (
     <div className='flex flex-col'>
+      <Helmet>
+      <title>Opšta hirurgija</title>
+        <meta
+          name="description"
+          content="Uklanjanje tumora kože - (ateroma, fibroma, mladeža, lipoma) – u uslovima lokalne anestezije po principima estetske hirurgije uklanjaju se tumori kože, uz prethodnu..."
+        />
+        <link rel="canonical" href="https://poliklinikajatros.com/opsta-hirurgija" />
+        <meta property="" />
+      </Helmet>
       <div className="text-5xl bg-gradient-to-br py-4 from-[#2641c2] to-[#01bffd] rounded-b-3xl text-secondary text-center" data-aos="fade-down" data-aos-delay="300">
         Opšta hirurgija
       </div>

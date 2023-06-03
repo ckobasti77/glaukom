@@ -2,6 +2,7 @@ import React from "react";
 
 import { lvc } from "../../assets/assets";
 import { ZakaziPregled } from '../components';
+import { Helmet } from "react-helmet";
 
 const jedan = [
   {id: 1, text: 'Laserski tretman vena (EVLA) u uslovima lokalne tumescentne anestezije'},
@@ -26,6 +27,15 @@ const dva = [
 const LaserVaskularniCentar = () => {
   return (
     <div className="flex flex-col">
+      <Helmet>
+      <title>Laser vaskularni centar</title>
+        <meta
+          name="description"
+          content="Endovenska laser ablacija (EVLA) predstavlja minimalno invazivnu intervenciju koja koristi energiju lasera za tretman obolelih površnih vena..."
+        />
+        <link rel="canonical" href="https://poliklinikajatros.com/laser-vaskularni-centar" />
+        <meta property="" />
+      </Helmet>
       <div className="text-5xl bg-gradient-to-br py-4 from-[#2641c2] to-[#01bffd] rounded-b-3xl text-secondary text-center" data-aos="fade-down" data-aos-delay="300">
         Laser vaskularni centar
       </div>

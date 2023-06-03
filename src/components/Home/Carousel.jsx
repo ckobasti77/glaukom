@@ -31,15 +31,13 @@ const Carousel = () => {
       loop={true}
       modules={[Navigation, Pagination, Autoplay]}
       navigation={true}
-      className="mySwiper sm:h-56 md:h-[75vh] xl:h-screen rounded-b-xl xl:rounded-b-3xl"
+      className="mySwiper sm:h-96 md:h-[75vh] xl:h-screen my-auto rounded-b-3xl"
     >
       {slides.map((slide) => {
         return (
-          <SwiperSlide key={slide.id} className="swiper-slide">
-            <div className="">
-              <img src={slide.path} alt={slide.alt} className="object-contain sm:h-56 md:h-[75vh] xl:h-screen w-full"/>
+          <SwiperSlide key={slide.id} className="swiper-slide my-auto">
+              <img src={slide.path} alt={slide.alt} className="object-contain sm:h-96 md:h-[75vh] xl:h-screen w-full"/>
               <div className="absolute top-0 left-0 w-full h-full swiper-overlay"></div>
-            </div>
           </SwiperSlide>
         );
       })}

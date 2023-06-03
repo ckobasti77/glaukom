@@ -2,6 +2,7 @@ import React from "react";
 
 import { dijagnostika } from "../../assets/assets";
 import { ZakaziPregled } from '../components';
+import { Helmet } from "react-helmet";
 
 const jedan = [
   { id: 1, text: "Ultrazvuk srca sa color dopplerom" },
@@ -15,6 +16,15 @@ const jedan = [
 const Dijagnostika = () => {
   return (
     <div className="flex flex-col">
+      <Helmet>
+      <title>Dijagnostika</title>
+        <meta
+          name="description"
+          content="Kolor dopler krvnih sudova (CDS) ili vrata ili ruku i nogu..."
+        />
+        <link rel="canonical" href="https://poliklinikajatros.com/dijagnostika" />
+        <meta property="" />
+      </Helmet>
       <div className="text-5xl bg-gradient-to-br py-4 from-[#2641c2] to-[#01bffd] rounded-b-3xl text-secondary text-center" data-aos="fade-down" data-aos-delay="300">
         Dijagnostika
       </div>

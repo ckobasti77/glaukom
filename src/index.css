@@ -31,7 +31,7 @@
 
 body {
   background-color: var(--secondary);
-  font-family: "Lato", sans-serif;
+  font-family: "Merriweather", sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -49,9 +49,16 @@ body {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.swiper-slide {
+.mySwiper {
   background: radial-gradient(ellipse at top left, hsl(195, 99%, 60%), transparent),
     radial-gradient(ellipse at bottom right, #01bffd, transparent);
+}
+
+@media (max-width: 768px) {
+  .mySwiper {
+  background: radial-gradient(ellipse at top left, hsl(195, 99%, 60%), hsl(195, 99%, 50%)),
+    radial-gradient(ellipse at bottom right, hsl(195, 99%, 50%), hsl(195, 99%, 60%));
+}
 }
 
 .burger-label {
@@ -353,10 +360,6 @@ body {
   background: linear-gradient(145deg, #cfd4dd, #f6fdff);
 }
 
-.mySwiper .scroll-down {
-  animation: bounce 1s linear infinite;
-  transition: transform 0.3s ease-in-out;
-}
 
 @keyframes bounce {
   0%,
@@ -366,10 +369,6 @@ body {
   50% {
     transform: translateY(-10px) scale(2);
   }
-}
-
-.mySwiper .scroll-down:hover {
-  transform: translateY(-10px) scale(2.5);
 }
 
 .card-headings {
