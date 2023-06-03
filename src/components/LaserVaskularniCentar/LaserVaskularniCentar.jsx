@@ -33,7 +33,7 @@ const LaserVaskularniCentar = () => {
           name="description"
           content="Endovenska laser ablacija (EVLA) predstavlja minimalno invazivnu intervenciju koja koristi energiju lasera za tretman obolelih površnih vena..."
         />
-        <link rel="canonical" href="https://poliklinikajatros.com/laser-vaskularni-centar" />
+        <link rel="canonical" href="http://poliklinikajatros.com/laser-vaskularni-centar" />
         <meta property="" />
       </Helmet>
       <div className="text-5xl bg-gradient-to-br py-4 from-[#2641c2] to-[#01bffd] rounded-b-3xl text-secondary text-center" data-aos="fade-down" data-aos-delay="300">
