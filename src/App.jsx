@@ -72,7 +72,7 @@ function App() {
 
   return (
     <>
-      <div className="w-screen h-screen fixed z-[9999999999999999] bg-black">{" "}</div>
+      {/* <div className="w-screen h-screen fixed z-[9999999999999999] bg-black">a</div> */}
       {loader && <Loader />}
       <Router>
         <Routes>
