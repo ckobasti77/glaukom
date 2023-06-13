@@ -11,6 +11,7 @@ const About = () => {
           src={logo}
           alt="logo"
           className="transform scale-75 mx-auto"
+          style={{width: 'auto', height: 'auto'}}
           data-aos="zoom-in"
           data-aos-delay="100"
         />
@@ -29,9 +30,9 @@ const About = () => {
           data-aos="zoom-in"
           data-aos-delay="300"
         >
-          <h2 className="text-center text-gradient mb-4">
-            Zašto baš mi?
-          </h2>
+          <h1 className="text-center text-gradient mb-4">
+            Zašto baš mi?{"                       "}
+          </h1>
           <p className="text-fourth text-left spacing my-4">
             <span className="text-gradient">JATROS</span> je od početka bila
             porodična delatnost. Kako se širio spektar medicinskih usluga, tako
@@ -39,9 +40,9 @@ const About = () => {
             pre svega od porodica koje su sve više poklanjale poverenje
             poliklinici <span className="text-gradient">JATROS</span>.
           </p>
-          <p className="text-fourth text-left spacing">
+          <h2 className="text-fourth text-left spacing">
             Mislimo da je preporuka najbolja reklama.
-          </p>
+          </h2>
         </div>
         <div
           className="md-div w-[80%] my-6 lg:w-[40%] p-12 flex flex-col justify-between"

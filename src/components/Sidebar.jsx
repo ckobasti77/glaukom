@@ -96,7 +96,7 @@ const Sidebar = ({ scrollToTop }) => {
         setActiveTab(1)
         scrollToTop()
         }}>
-        <img src={logo} alt="logo" className="transform xs:scale-[.8] "/>
+        <img src={logo} alt="logo" className="transform xs:scale-[.8]" style={{width: 'auto', height: 'auto'}}/>
       </Link>
       <div className="flex flex-col gap-2">
         {tabs.map((tab) => (
