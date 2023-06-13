@@ -22,7 +22,7 @@ const Dijagnostika = () => {
           name="description"
           content="Kolor dopler krvnih sudova (CDS) ili vrata ili ruku i nogu..."
         />
-        <link rel="canonical" href="http://poliklinikajatros.com/dijagnostika" />
+        <link rel="canonical" href="/dijagnostika" />
         <meta property="" />
       </Helmet>
       <div className="text-5xl bg-gradient-to-br py-4 from-[#2641c2] to-[#01bffd] rounded-b-3xl text-secondary text-center" data-aos="fade-down" data-aos-delay="300">

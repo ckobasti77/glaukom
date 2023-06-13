@@ -72,7 +72,7 @@ const OcnaPoliklinika = () => {
           name="description"
           content="Lečenje poremećaja vida uzrokovanih dugotrajnim radom na računaru..."
         />
-        <link rel="canonical" href="http://poliklinikajatros.com/ocna-poliklinika" />
+        <link rel="canonical" href="/ocna-poliklinika" />
         <meta property="" />
       </Helmet>
       <div

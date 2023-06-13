@@ -21,7 +21,7 @@ const Kardiologija = () => {
           name="description"
           content="Lečenje malignih poremećaja ritma srčanog rada..."
         />
-        <link rel="canonical" href="http://poliklinikajatros.com/kardiologija" />
+        <link rel="canonical" href="/kardiologija" />
         <meta property="" />
       </Helmet>
       <div className="text-5xl bg-gradient-to-br py-4 from-[#2641c2] to-[#01bffd] rounded-b-3xl text-secondary text-center" data-aos="fade-down" data-aos-delay="300">

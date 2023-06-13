@@ -11,7 +11,7 @@ const LaserskiTretman = () => {
           name="description"
           content="Laserski lifting lica, ili Fotona 4D lifting, je tretman kojim postižemo maksimalni efekat podmlađivanja - rejuvenaciju na dubokim, srednjim i..."
         />
-        <link rel="canonical" href="http://poliklinikajatros.com/laserski-tretman" />
+        <link rel="canonical" href="/laserski-tretman" />
         <meta property="" />
       </Helmet>
       <div

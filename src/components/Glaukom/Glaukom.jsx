@@ -18,7 +18,7 @@ const Glaukom = () => {
           name="description"
           content="Konsultant glaukomatolog je Ass. Dr Vesna Marić stalno zaposlena na Klinici za očne bolesti Kliničkog centra Srbije na odeljenju glaukoma..."
         />
-        <link rel="canonical" href="http://poliklinikajatros.com/glaukom" />
+        <link rel="canonical" href="/glaukom" />
         <meta property="" />
       </Helmet>
       <div
