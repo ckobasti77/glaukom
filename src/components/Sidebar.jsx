@@ -75,7 +75,7 @@ const Sidebar = ({ scrollToTop }) => {
       <motion.label
         initial={{ opacity: 0, scale: 0, y: "-50px" }}
         animate={{ opacity: 1, scale: 0.75, y: 0 }}
-        transition={{ duration: 0.5, delay: 2 }}
+        transition={{ duration: 0.5, delay: 0.5 }}
         htmlFor="check"
         className={`${
           !navOpen ? "xs:-right-[60px] bg-secondary transition-transform cursor-pointer duration-300 transform scale-75 border-r-4 border-b-4 border-b-third border-r-third items-center -top-[9px] burger-label-aa" : "xs:-right-[2px] -top-[2px] overflow-hidden transform scale-0"
