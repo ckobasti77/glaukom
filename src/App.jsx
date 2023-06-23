@@ -73,9 +73,9 @@ function App() {
   return (
     <>
       {/* <div className="w-screen h-screen fixed z-[9999999999999999] bg-black">a</div> */}
-      {loader 
+      {/* {loader 
         ? <Loader />
-        : (
+        : ( */}
           <>
             <Router>
               <Routes>
@@ -102,8 +102,8 @@ function App() {
                 <BsChevronBarUp className="transform scale-[1.75]" />
               </button>
           </>
-        )
-      }
+        {/* )
+      } */}
     </>
   );
 }
