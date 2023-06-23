@@ -10,9 +10,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@emotion/core": "^10.0.28",
-    "@emotion/react": "^11.11.0",
-    "@emotion/styled": "^10.0.27",
     "@fortawesome/fontawesome-svg-core": "^6.4.0",
     "@fortawesome/free-regular-svg-icons": "^6.4.0",
     "@fortawesome/free-solid-svg-icons": "^6.4.0",
@@ -23,8 +20,6 @@
     "flowbite": "^1.6.5",
     "flowbite-react": "^0.4.7",
     "framer-motion": "^10.12.8",
-    "neumorphism-react-design": "^1.0.7",
-    "neumorphkit": "^1.1.2",
     "postcss": "^8.4.23",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
@@ -33,9 +28,7 @@
     "react-helmet": "^6.1.0",
     "react-icons": "^4.8.0",
     "react-router-dom": "^6.11.2",
-    "react-soft-ui": "^0.2.0",
-    "swiper": "^9.3.2",
-    "tailwindcss-neumorphism": "^0.1.0"
+    "swiper": "^9.3.2"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",

@@ -22,14 +22,12 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 
 function App() {
-  // Aos
   Aos.init({
     duration: 500,
     delay: 150,
     offset: 0,
   });
 
-  // Loader
   const [loader, setLoader] = useState(true);
 
   useEffect(() => {
@@ -38,7 +36,6 @@ function App() {
     }, 2000);
   }, []);
 
-  // Scroll To Top
   const scrollToTop = () => {
     window.scroll({
       top: 0,
@@ -72,7 +69,6 @@ function App() {
 
   return (
     <>
-      {/* <div className="w-screen h-screen fixed z-[9999999999999999] bg-black">a</div> */}
       {loader && <Loader />}
       <Router>
         <Routes>

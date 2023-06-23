@@ -1,7 +1,6 @@
 import React from "react";
 import { Novo } from "../components";
 import { logo } from "../../assets/assets";
-import { Link } from "react-router-dom";
 
 const About = () => {
   return (

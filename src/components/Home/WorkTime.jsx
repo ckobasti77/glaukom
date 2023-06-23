@@ -1,31 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 const WorkTime = () => {
-  const [isWorking, setIsWorking] = useState(false);
-  const [isSaturday, setIsSaturday] = useState(false);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      let currentHour = new Date().getHours();
-      let currentDayOfWeek = new Date().getDay();
-      if (
-        currentDayOfWeek >= 1 &&
-        currentDayOfWeek <= 5 &&
-        currentHour >= 10 &&
-        currentHour <= 18
-      ) {
-        setIsWorking(true);
-      } else if (
-        currentDayOfWeek === 6 &&
-        currentHour >= 10 &&
-        currentHour <= 14
-      ) {
-        setIsWorking(true);
-        setIsSaturday(true);
-      }
-    }, 1000);
-    return () => clearInterval(interval);
-  }, []);
 
   return (
     <div className="px-4 xl:px-12 py-4 xl:py-32 w-full h-5/6 xl:w-3/6 work-time flex flex-col justify-between">

@@ -98,7 +98,6 @@ const OcnaPoliklinika = () => {
             data-aos="zoom-in"
             data-aos-delay={200 * card.delay}
           >
-            {/* <img src={card.img} onClick={() => setActiveImg(card.id - 1)} alt="ocna-poliklinika" className="ocna2 hover:opacity-[.65] transition-all duration-150 cursor-zoom-in rounded-[45px] m-5 object-cover h-[260px]"  data-aos="fade-up" data-aos-delay={300 * card.delay}/> */}
             <div className="p-10 flex flex-col gap-10 h-full">
               <p
                 className="card-headings text-xl bg-gradient-to-br from-[#2641c2] to-[#01bffd] rounded-xl text-secondary px-4 py-2"
