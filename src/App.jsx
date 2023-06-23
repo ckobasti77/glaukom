@@ -1,5 +1,4 @@
-import { useState, useEffect, useContext } from "react";
-import Context from "./context/Context";
+import { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { BsChevronBarUp } from 'react-icons/bs'
 
@@ -37,7 +36,13 @@ function App() {
     }, 2000);
   }, []);
 
-  const { scrollToTop } = useContext(Context)
+  const scrollToTop = () => {
+    window.scroll({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+  
 
   const [showScrollToTop, setShowScrollToTop] = useState(false)
 

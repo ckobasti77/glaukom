@@ -1,11 +1,15 @@
-import React, { useContext } from "react";
-import Context from "../context/Context";
+import React from "react";
 import { Link } from "react-router-dom";
 
 import { BsFillArrowRightCircleFill } from "react-icons/bs";
 
 const ZakaziPregled = () => {
-  const { scrollToTop } = useContext(Context)
+  const scrollToTop = () => {
+    window.scroll({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
 
   return (
     <Link
