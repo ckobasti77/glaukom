@@ -63,7 +63,6 @@ const Glaukom = () => {
         </div>
         <Link
           data-aos="zoom-in"
-          // data-aos-delay="500"
           to="/lasersko-lecenje-glaukoma"
           className="cursor-pointer gradient-hover my-6 text-center text-lg md:text-xl whitespace-nowrap lg:text-2xl z-[999] transition-all duration-200 text-secondary px-9 py-3 rounded-full group transform scale-150"
         >

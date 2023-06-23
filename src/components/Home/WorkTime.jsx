@@ -1,7 +1,6 @@
 import React from "react";
 
 const WorkTime = () => {
-
   return (
     <div className="px-4 xl:px-12 py-4 xl:py-32 w-full h-5/6 xl:w-3/6 work-time flex flex-col justify-between">
       <h2

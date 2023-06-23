@@ -30,5 +30,5 @@ export default {
       },
     },
   },
-  plugins: [require('flowbite/plugin'), require('tailwindcss-neumorphism')]
+  plugins: [require('flowbite/plugin')]
 }

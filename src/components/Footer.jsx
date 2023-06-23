@@ -1,5 +1,4 @@
 import React from 'react'
-import { BsPhoneFill } from "react-icons/bs";
 
 const Footer = () => {
   return (

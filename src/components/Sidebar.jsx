@@ -1,8 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
-import { motion, usePresence, useAnimate } from "framer-motion";
+import { motion } from "framer-motion";
 import { logo } from "../assets/assets";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 
 import { Link } from "react-router-dom";
 
@@ -36,16 +34,6 @@ const Sidebar = ({ scrollToTop }) => {
       setActiveTab(tabs[aktivnaRuta].id)
     }
   }, [tabs.findIndex(tab => tab.path === `/${window.location.href.split('/').pop()}`)])
-  
-
-  
-  const toggleTheme = () => {
-    if (theme === "light") {
-      setTheme("dark");
-    } else {
-      setTheme("light");
-    }
-  };
 
   useEffect(() => {
     function handleClickOutside(event) {
@@ -54,10 +42,8 @@ const Sidebar = ({ scrollToTop }) => {
       }
     }
 
-    // Dodajemo event listener na dokument kada se Sidebar montira
     document.addEventListener("click", handleClickOutside);
 
-    // Uklanjamo event listener kada se Sidebar demontira
     return () => {
       document.removeEventListener("click", handleClickOutside);
     };
@@ -75,7 +61,7 @@ const Sidebar = ({ scrollToTop }) => {
       <motion.label
         initial={{ opacity: 0, scale: 0, y: "-50px" }}
         animate={{ opacity: 1, scale: 0.75, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.5 }}
+        transition={{ duration: 0.5, delay: 2 }}
         htmlFor="check"
         className={`${
           !navOpen ? "xs:-right-[60px] bg-secondary transition-transform cursor-pointer duration-300 transform scale-75 border-r-4 border-b-4 border-b-third border-r-third items-center -top-[9px] burger-label-aa" : "xs:-right-[2px] -top-[2px] overflow-hidden transform scale-0"
