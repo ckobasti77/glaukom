@@ -5,13 +5,7 @@ import { AiOutlineClose } from "react-icons/ai";
 import { ZakaziPregled } from "../components";
 
 import {
-  ocna1,
-  // ocna2,
-  // ocna3,
-  // ocna4,
-  // ocna5,
-  // ocna6,
-  // ocna7,
+  carousel2,
 } from "../../assets/assets";
 import { Novo } from "../components";
 import { Helmet } from "react-helmet";
@@ -83,7 +77,7 @@ const OcnaPoliklinika = () => {
         Očna poliklinika
       </div>
       <img
-        src={ocna1}
+        src={carousel2}
         alt="ocna-poliklinika"
         className="mt-8 md:mt-16 w-screen md:w-5/6 lg:w-4/6  object-contain lg:object-cover mx-auto rounded-2xl ocna1"
         data-aos="zoom-in-down"
