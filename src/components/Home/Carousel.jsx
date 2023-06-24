@@ -35,7 +35,7 @@ const Carousel = () => {
       {slides.map((slide) => {
         return (
           <SwiperSlide key={slide.id} className="swiper-slide my-auto">
-              <img src={slide.path} alt={slide.alt} className="object-contain sm:h-96 md:h-[75vh] xl:h-screen w-full"/>
+              <img src={slide.path} alt={slide.alt} className="object-contain sm:h-96 md:h-[75vh] xl:h-screen w-full" />
               <div className="absolute top-0 left-0 w-full h-full swiper-overlay"></div>
           </SwiperSlide>
         );
