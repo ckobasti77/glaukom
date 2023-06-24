@@ -89,7 +89,7 @@ body {
   box-shadow: 4px 4px 8px #8a8e94, -4px -4px 8px #ffffff;
   border: 2px solid var(--primary);
   background-size: 300% 100%;
-  moz-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
@@ -97,14 +97,14 @@ body {
 
 .gradient-hover:hover {
   background-position: 100% 100%;
-  moz-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
 .gradient-hover:active {
   background-position: 100% 100%;
-  moz-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
@@ -378,6 +378,7 @@ body {
 
 .text-gradient {
   background: linear-gradient(to right, #2641c2, #01bffd);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
