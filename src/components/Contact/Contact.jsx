@@ -18,7 +18,7 @@ const Contact = () => {
           data-aos-delay="200"
         >
           <span className="absolute -top-10 pozovite mx-auto rounded-t-xl bg-secondary py-4 px-8 text-xl">E-mail</span>
-          <form action="" className="flex h-full flex-col justify-between">
+          <form action="https://formsubmit.co/jatros.ord@gmail.com" className="flex h-full flex-col justify-between">
             <div className="flex gap-4">
               <div
                 className="p-[1px] inputs-outline rounded-full my-4 w-3/6"
