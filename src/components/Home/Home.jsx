@@ -7,13 +7,12 @@ const Home = () => {
   return (
     <div>
       <Helmet>
-        <title>Početna</title>
+        <title>Poliklinika Jatros</title>
         <meta
           name="description"
           content="Opremljeni smo savremenin medicinskim aparatima i uređajima, međutim vreme koje smo spremni da posvetimo svakom pacijentu i njegovom zdravstvenom problemu..."
         />
         <link rel='canonical' href='https://poliklinikajatros.com' />
-        <meta property=""/>
       </Helmet>
       <Carousel />
       <About />
